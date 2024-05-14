@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body
+        {
+            background-color: rgb(217, 227, 227);
+        }
+
+        .container
+        {
+            width: 600px;
+            background-color: white;
+            margin: 0 auto;
+            border: 2px solid black;
+            box-sizing: border-box;
+
+            display: flex;
+        }
+
+        h2
+        {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .item
+        {
+            background-color: aqua;
+            height: 100px;
+            margin: 2px;
+        }
+
+        /* flex-grow / flex => mementukan lebar */
+        .satu{
+            flex: 1;
+        }
+        .dua{
+            flex: 2;
+        }
+        .tiga{
+            flex: 1;
+        }
+        .empat{
+            flex: 3;
+        }
+        .lima{
+            flex: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Flex-grow</h2>
+    <div class="container">
+        <div class="item satu">1</div>
+        <div class="item dua">2</div>
+        <div class="item tiga">3</div>
+        <div class="item empat">4</div>
+        <div class="item lima">5</div>
+    </div>
+</body>
+</html>

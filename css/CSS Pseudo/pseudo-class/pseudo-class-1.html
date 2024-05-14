@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        a {
+            padding: 100px 150px;
+            font-weight: bold;
+            transition: .3s;
+            background-color: rgb(0, 203, 203);
+            text-align: center;
+            color: white;
+        }
+
+        a:hover {
+            background-color: orange;
+            color: black;
+        }
+
+        a:focus{
+            background-color: blue;
+        }
+
+        /* a:visited{
+            background-color: rgb(38, 255, 0);
+        } */
+    </style>
+</head>
+<body>
+    <a href="#">HOVER</a>
+    <p>Klik untuk fokus</p>
+    <p>Jika sudah diklik maka visited berfungsi</p>
+</body>
+</html>
