@@ -1,0 +1,70 @@
+/* Media Queries */
+/* Media Laptop */
+@media (max-width: 1336px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+/* Media Tablet */
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamberger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30vw;
+        height: 100vh;
+        transition: 0.3s ease-in-out;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--bg);
+        display: block;
+        font-size: 1.3rem;
+        margin: 1.5rem;
+        padding: 0.5rem;
+    }
+}
+
+
+/* Media mobile */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+
+    .about .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about .row .about-img {
+        flex: 1 1 0rem;
+    }
+
+    .about .row .about-content {
+        flex: 1 1 0;
+        padding: 0 1rem;
+    }
+
+    .contact .row {
+        flex-wrap: wrap;
+    }
+
+    .contact .row .map {
+        height: 30rem;
+    }
+}

@@ -1,0 +1,160 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* VARIABEL */
+:root {
+    --primary-color: #35fb27;
+    --dark-color: #0f0f0f;
+    --gray-color: gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* GOBAL CSS */
+section {
+    padding: 40px 0;
+}
+
+section .section-title {
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-orange {
+    background-color: var(--primary-color);
+    color: white;
+    transition: 0.3s;
+}
+.btn-orange:hover {
+    background-color: rgb(0, 255, 72);
+}
+
+.text-orange {
+    color: var(--primary-color);
+}
+
+.text-dark {
+    color: var(--dark-color);
+}
+
+.fs-7 {
+    font-size: var(--small-font-size);
+}
+
+.form-control:focus {
+    box-shadow: 0 0 5px var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-control::placeholder {
+    font-family: "Poppins", serif;
+    font-size: 12px;
+}
+
+textarea {
+    resize: none;
+}
+
+/* CSS PER SECTION */
+/* NAVBAR */
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Header */
+.header-section .header-title {
+    font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill {
+    color: var(--dark-color);
+}
+
+.header-section .header-skill:hover {
+    color: var(--primary-color);
+}
+
+.header-section .header-skill i {
+    transition: 0.3s;
+}
+
+.header-section .header-skill:hover i {
+    transform: rotate(-45deg);
+}
+
+/* Portfolio */
+.portfolio-section .card .card-img-top,
+.news-section .card .card-img-top {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .portfolio-section .card .card-img-top,
+    .news-section .card .card-img-top {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Skills */
+.skills-section {
+    background-color: var(--dark-color);
+}
+
+.skills-section .progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+
+.skills-section .progress {
+    background-color: var(--primary-color);
+}
+
+/* Timeline */
+.timeline-section .timeline-hover:hover {
+    background-color: var(--primary-color);
+}
+
+/* Contact */
+.contact-section {
+    background-color: rgb(248, 252, 255);
+}
+
+.contact-section .box {
+    width: fit-content;
+    padding: 10px;
+    background-color: #f8fff7;
+    border: 1px solid var(--primary-color);
+    color: rgb(0, 255, 0);
+    border-radius: 3px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+}
