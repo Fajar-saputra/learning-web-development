@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
     .container.about .about-text p:nth-child(3),
     .container.services p {
         line-height: 1.5;
@@ -50,7 +51,7 @@
     }
 
     /* Message */
-    .container-message {
+    .container.message {
         margin-top: 0.3rem;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
