@@ -20,6 +20,9 @@ body {
 
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 
 /* Navigation */
@@ -278,7 +281,6 @@ body {
     padding: 1rem 3rem;
     color: #fff;
     background-color: #c78542;
-    cursor: pointer;
 }
 
 /* Footer */
@@ -289,6 +291,7 @@ footer {
     align-items: center;
     justify-content: center;
     gap: .4rem;
+    cursor: pointer;
 }
 
 footer i {
@@ -296,4 +299,5 @@ footer i {
     border: .1rem solid #eee;
     margin: 0 .2rem;
     border-radius: 50%;
+    cursor: pointer;
 }
