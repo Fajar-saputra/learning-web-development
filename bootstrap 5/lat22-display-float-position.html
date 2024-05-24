@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Instalasi Bootstrap Offline</title>
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="bootstrap-5.3.3/css/bootstrap.min.css" />
+    </head>
+
+    <body style="height: 5000px">
+        <div class="container m-5">
+            <h4 class="text-center">Utilities Bootstrap 5</h4>
+            <h2 class="text-center">Display, Float, and Position</h2>
+            <hr />
+
+            <!-- Lets Begin -->
+
+            <h3 class="text-primary">Display</h3>
+            <p>Bagaimana Perilaku dari Display..?</p>
+            <!-- Div & Span -> Pengelompokan -->
+
+            <span></span>
+            <div></div>
+            <!-- 
+                Popular Display : 
+                1. Inline
+                2. Block
+                3. inline-block
+                4. flex
+                5. Grid
+                6 . etc -->
+
+            <!-- 1. Inline -->
+
+            <!-- Span Display = Inline -->
+            <!-- a. Inline tidak menambahkan baris ketika ditambahkan elment yang memiliki display inline di dekatnya. (Span) -->
+            <span>haii</span>
+            <span>haii</span>
+            <span>haii</span>
+            <span>haii</span>
+            <br />
+            <!-- b. lebar dan tingginya sesuai element didalamnya  -->
+            <!-- c. tinggi dan lebar tidak dapat di atur -->
+            <span style="width: 100px; height: 100px">span tidak bisa diatur</span>
+            <!-- d. margin & pading hanya mempengaruhi element secara horizontal tidak Vertical -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora at nam, et, ducimus consequatur reprehenderit sed magni repellendus ex molestias nesciunt itaque dolorum.
+                Cupiditate impedit dolorem atque quis doloribus natus ea tempora ipsum magni, eius voluptatibus in asperiores ipsam tempore aut porro ullam ad nulla ducimus tenetur blanditiis
+                repudiandae iste. Assumenda est architecto sed minima recusandae fugit laborum aut voluptatum adipisci amet ipsum ducimus aperiam quasi iure tenetur quaerat, harum velit quas ex ab
+                voluptatibus tempora. Exercitationem laborum ipsum necessitatibus consequatur quis. Nemo commodi molestias assumenda excepturi eveniet. Reiciendis dolorum commodi laudantium, unde id
+                in rem aut.<span style="background-color: aqua; padding: 5rem; margin: 5rem">haii</span> Corporis necessitatibus quibusdam magnam ducimus pariatur. Eos molestias sed ipsum. Ducimus,
+                vero accusantium doloremque rerum eum delectus eligendi mollitia officiis dolore et qui in quisquam perspiciatis sunt odio porro laborum laboriosam tenetur laudantium. Autem pariatur
+                porro reprehenderit odit amet, rem facilis asperiores quam nostrum voluptatum quaerat earum eligendi et aperiam recusandae laboriosam beatae fugiat illo consequatur necessitatibus
+                similique reiciendis. Fugiat ipsa quas illo non aliquam. Ipsa placeat iusto enim minus ad inventore iure consequuntur! Dicta quaerat voluptatem ea animi soluta earum nostrum rem, iusto
+                perspiciatis reiciendis et eligendi praesentium delectus ipsam est. Fugit voluptates soluta suscipit sapiente nesciunt, architecto natus facere quaerat.
+            </p>
+
+            <!-- 2. Block -->
+            <!--Div Display = Block -->
+
+            <!-- a. menambahkan baris baru ketika ditambahkan element HTML yang memiliki display block -->
+            <div>satu</div>
+            <div>dua</div>
+            <div>tiga</div>
+            <!-- b. dapat di atur lebar dan tigginya, tapi jika tidak di atur secara default lebarnya akan memenuhi atau sesuai dengan element pembungkusnya -->
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo porro ipsa quisquam dolores enim aliquid exercitationem, excepturi totam voluptates voluptatum voluptatem repellat
+                necessitatibus, eum hic cumque quibusdam odio illum dicta! Omnis unde nisi rerum iste rem amet architecto, tempora quos delectus magnam, atque assumenda facere ex deleniti molestias
+                nam nemo suscipit esse quibusdam cupiditate dolorum doloribus ratione aspernatur corrupti! Natus repellendus et harum quidem qui at veniam dicta reiciendis corrupti nihil? Iure facere
+                ipsum ipsam consequatur fuga eligendi perferendis possimus eveniet soluta, delectus totam repellat dolores laborum doloribus excepturi, quae velit autem unde maxime. Ducimus eos
+                eligendi deleniti vitae laboriosam. Fuga accusamusd <div style="background-color: aquamarine; width: 200px; height: 100px;">ini contoh tag block</div> eligendi tenetur non magnam architecto reiciendis quaerat atque odit officiis labore quidem, laboriosam, soluta iure alias excepturi
+                illo sed distinctio magni, aperiam doloremque neque? Sed eveniet doloribus, dignissimos eius debitis numquam quas voluptates perferendis qui repudiandae aut ducimus, praesentium
+                consectetur alias, quam inventore facilis obcaecati quaerat minus voluptatum. Aliquam rerum debitis officia impedit vitae nostrum possimus quidem! Voluptas ut ipsum minus expedita
+                velit alias quidem consequuntur, similique facilis dolores incidunt minima nam officia officiis dolorem? Nostrum id mollitia dicta rerum sapiente. Excepturi, nam alias neque maiores
+                officiis dolorum sint suscipit nihil! Repellendus, dolor deleniti. Possimus laborum repellendus quidem?
+            </p>
+
+            <!-- 3. Inline-Block -->
+            <!-- Display Inline-Block -->
+            <span class="d-inline-block" style="background-color: orange; width: 100px; height: 100px;">inline-block</span>
+            <!-- a. Berperilaku seperti inline & Block -->
+
+            <!-- Merubah Display di bootstarp 5 -->
+            <h3 class="text-primary">Float</h3>
+            <p>Bagaimana Perilaku dari Float..?</p>
+
+            <!-- 4. Float -->
+            <!-- 1. Mangatur Posisi pada sebuah element. -->
+            <!-- 2. dipaksa berada di sebelah kanan atau kiri pada element pembungkusnya atau istilahnya mengambang. -->
+            <!-- 3. prilakunya berbeda dengan alignment. -->
+            <!-- 4. Clear fix -> membersihkan float -> collaps -->
+            <div class="bungkus bg-warning clearfix" style="width: 500px; height: 500px;">
+                <div style="height: 100px; width: 100px;" class="bg-info float-end">elemen 1</div>
+                <div style="height: 100px; width: 100px;" class="bg-danger float-end">elemen 2</div>
+                <div style="height: 100px; width: 100px;" class="bg-success float-end">elemen 3</div>
+            </div>
+
+            <br />
+            <h3 class="text-primary">Position</h3>
+            <p>Bagaimana Perilaku dari Position..?</p>
+            <!-- 5. Position -->
+
+            <!-- a. Static -->
+            <!-- b. Retalive -->
+            <!-- c. Absolute -->
+            <!-- d. Fixed -->
+            
+        </div>
+
+        <script src="bootstrap-5.3.3/js/bootstrap.min.js"></script>
+    </body>
+</html>
