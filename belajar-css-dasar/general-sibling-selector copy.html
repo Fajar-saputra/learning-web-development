@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>General Sibling Selector</title>
+        <style>
+            div ~ p {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>General Sibling Selector digunakan untuk memilih seluruh element saudara dari element yang dipilih, dimana harus memiliki parent element yang sama .</h1>
+        <p>Paragraf ini tidak dipilih</p>
+        <div>
+            <p>Paragraf ini tidak dipilih</p>
+            <article><p>Paragraf ini tidak dipilih</p></article>
+            <p>Paragraf ini tidak dipilih</p>
+        </div>
+        <p>Paragraf ini dipilih</p>
+        <p>Paragraf ini dipilih</p>
+    </body>
+</html>
