@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Attribute Selector 1</title>
+        <style>
+            [target="_blank"] {
+                background-color: purple;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+            a[target="_blank"] {
+                background-color: purple;
+                color: white;
+            }
+        </pre>
+        <p>a[target="_blank"] artinya memilih semua element a yang memiliki atribut target dengan nilai “_blank”.</p>
+        <hr />
+        <a href="http://" target="_blank" rel="noopener noreferrer">contoh 1 dipilih</a>
+        <a href="http://" target="_self" rel="noopener noreferrer">contoh 2 tidak dipilih</a>
+        <a href="http://" target="_blank" rel="noopener noreferrer">contoh 3 dipilih</a>
+        <a href="http://" target="_self" rel="noopener noreferrer">contoh 4 tidak dipilih</a>
+    </body>
+</html>

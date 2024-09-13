@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Attribute Selector 1</title>
+        <style>
+            p[title|="belajar"] {
+                background-color: purple;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <pre>
+            p[title|="belajar"] {
+                background-color: purple;
+                color: white;
+            }
+        </pre>
+        <p>p[title|="belajar"] artinya memilih semua element p yang memiliki atribut title yang memiliki value “belajar” atau “belajar” yang diikuti dengan karakter -.</p>
+        <hr />
+        <p title="belajar">Ini dipilih</p>
+        <p title="belajar web pemograman">Ini tdaik dipilih</p>
+        <p title="belajarweb pemograman">Ini tidak dipilih</p>
+        <p title="belajar-web pemograman">Ini dipilih</p>
+        <p title="web pemograman belajar">Ini tidak dipilih</p>
+    </body>
+</html>
