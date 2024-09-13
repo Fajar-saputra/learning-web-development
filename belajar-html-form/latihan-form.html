@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Latihan form 1</title>
+    </head>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        input[placeholder] {
+            font-family: "Times New Roman", Times, serif;
+        }
+    </style>
+    <body>
+        <h1>IDENTITAS PESERTA DIDIK</h1>
+        <form action="" method="get" target="_blank">
+            <ol>
+                <li title="Nama Siswa"><label for="nama">Nama Siswa </label> <input type="text" name="nama" id="nama" min="3" required placeholder="Nama" /></li>
+                <li title="NISN"><label for="nisn">Nis / NISN </label> <input type="text" name="nisn" id="nisn" min="3" max="10" required placeholder="NISN" /></li>
+                <li title="Tempat Tanggal Lahir">
+                    <label for="tempat_tinggal_lahir">Tempat Tanggal Lahir </label> <input type="text" name="tempat_tinggal_lahir" id="tempat_tinggal_lahir" required placeholder="Tempat lahir" />
+                    <input type="date" name="tanggal_lahir" id="tanggal_lahir" min="2010-01-01" max="2020-12-31" required />
+                </li>
+                <li>
+                    <label for="jenis_kelamin">Jenis Kelamin </label>
+                    <select name="jenis_kelamin" id="jenis_kelamin">
+                        <option value="man">Laki-laki</option>
+                        <option value="woman">Perempuan</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="anak_ke">Anak Ke </label>
+                    <input type="number" name="anak_ke" id="anak_ke" min="1" max="10" required />
+                </li>
+                <li>
+                    <label for="alamat_siswa">Alamat Siswa </label>
+                    <input type="text" name="alamat_siswa" id="alamat_siswa" required placeholder="Alamat" />
+                </li>
+                <li>
+                    <label for="nama_ayah">Nama Ayah </label>
+                    <input type="text" name="nama_ayah" id="nama_ayah" required placeholder="Nama ayah" />
+                </li>
+                <li>
+                    <label for="nama_ibu">Nama Ibu </label>
+                    <input type="text" name="nama_ibu" id="nama_ibu" required placeholder="Nama ibu" />
+                </li>
+                <li>
+                    <label for="pekerjaan_ayah">Pekerjaan Ayah </label>
+                    <input type="text" name="pekerjaan_ayah" id="pekerjaan_ayah" required placeholder="pekerjaan ayah" />
+                </li>
+                <li>
+                    <label for="pekerjaan_ibu">Pekerjaan Ibu </label>
+                    <input type="text" name="pekerjaan_ibu" id="pekerjaan_ibu" required placeholder="pekerjaan ibu" />
+                </li>
+                <li>
+                    <label for="nama_wali">Nama Wali </label>
+                    <input type="text" name="nama_wali" id="nama_wali" placeholder="Nama wali" />
+                </li>
+                <li>
+                    <label for="pekerjaan_wali">Pekerjaan Wali </label>
+                    <input type="text" name="pekerjaan_wali" id="pekerjaan_wali" placeholder="pekerjaan wali" />
+                </li>
+                <li>
+                    <label for="foto_siswa">Foto Siswa </label>
+                    <input type="file" name="foto_siswa" id="foto_siswa" required />
+                </li>
+            </ol>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
