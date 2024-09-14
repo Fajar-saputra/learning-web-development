@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Counter</title>
+        <style>
+            body {
+                counter-set: Judul 0;
+                counter-set: SubJudul 0;
+                font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            }
+            h1 {
+                font-size: 1.5rem;
+                counter-increment: Judul 1;
+                counter-reset: SubJudul;
+            }
+            h2 {
+                font-size: 1rem;
+                counter-increment: SubJudul 1;
+            }
+
+            h1::before {
+                content: counter(Judul) ". ";
+            }
+            h2::before {
+                content: counter(Judul) "." counter(SubJudul) ". ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Judul</h1>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h1>Judul</h1>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h1>Judul</h1>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h1>Judul</h1>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+        <h2>Sub Judul</h2>
+    </body>
+</html>
