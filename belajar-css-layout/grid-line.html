@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Line</title>
+        <style>
+            .container {
+                display: grid;
+                text-align: center;
+                width: 80%;
+                gap: 2px;
+                grid-template-columns: [kolom1] 150px [kolom2] 200px [kolom3] 200px [kolom4];
+                grid-template-rows: [baris1] 100px [baris2] 100px [baris3] auto [baris4] auto [baris5];
+            }
+            header {
+                background-color: rgb(216, 216, 216);
+                grid-column-start: kolom1;
+                grid-column-end: kolom4;
+                grid-row-start: baris1;
+                grid-row-end: baris2;
+            }
+            aside {
+                background-color: khaki;
+                grid-column-start: kolom1;
+                grid-column-end: kolom2;
+                grid-row-start: baris2;
+                grid-row-end: baris4;
+            }
+            main {
+                background-color: gold;
+                grid-column-start: kolom2;
+                grid-column-end: kolom4;
+                grid-row-start: baris2;
+                grid-row-end: baris4;
+            }
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                grid-column-start: kolom1;
+                grid-column-end: kolom4;
+                grid-row-start: baris4;
+                grid-row-end: baris5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- <nav> -->
+                <!-- <ul> -->
+                <a href="">Home</a>
+                <a href="">Daftar</a>
+                <a href="">Produk</a>
+                <a href="">Kontak</a>
+                <!-- </ul> -->
+                <!-- </nav> -->
+            </header>
+            <aside>
+                <p>Ini aside</p>
+            </aside>
+            <main>
+                <h3>Contoh penggunaan Grid Templete</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+            </main>
+            <footer>contoh footer</footer>
+        </div>
+    </body>
+</html>

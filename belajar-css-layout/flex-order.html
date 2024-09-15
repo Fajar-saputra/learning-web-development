@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox Order</title>
+        <style>
+            .container {
+                display: flex;
+            }
+            .content {
+                background-color: chartreuse;
+                border: 2px solid aqua;
+                padding: 1rem;
+                margin: 1rem;
+            }
+            .satu {
+                order: 3;
+            }
+            .dua {
+                order: 4;
+            }
+            .tiga {
+                order: 1;
+            }
+            .empat {
+                order: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content satu">
+                <h3>Content 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptates nesciunt, sequi autem labore magnam.</p>
+            </div>
+            <div class="content dua">
+                <h3>Content 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptates nesciunt, sequi autem labore magnam.</p>
+            </div>
+            <div class="content tiga">
+                <h3>Content 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptates nesciunt, sequi autem labore magnam.</p>
+            </div>
+            <div class="content empat">
+                <h3>Content 4</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia voluptates nesciunt, sequi autem labore magnam.</p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Align Items</title>
+        <style>
+            .container {
+                display: grid;
+                width: 600px;
+                height: 500px;
+                margin: 0 auto;
+                border: 1px solid black;
+                grid-template-columns: 120px 120px 120px;
+                grid-template-rows: 120px 120px 120px;
+                /* align-items: flex-end; */
+                /* align-items: flex-start; */
+                /* align-items: center; */
+                /* align-items: baseline; */
+                /* align-items: stretch; */
+            }
+            .content {
+                background-color: rgb(164, 67, 255);
+                border: 1px solid hotpink;
+                border-radius: 5px;
+                padding: 1rem;
+                text-align: center;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">1</div>
+            <div class="content">2</div>
+            <div class="content">3</div>
+            <div class="content">4</div>
+            <div class="content">5</div>
+            <div class="content">6</div>
+            <div class="content">7</div>
+            <div class="content">8</div>
+            <div class="content">9</div>
+        </div>
+    </body>
+</html>
