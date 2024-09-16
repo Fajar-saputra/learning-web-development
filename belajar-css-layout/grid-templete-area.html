@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid Templete Are</title>
+        <style>
+            .container {
+                display: grid;
+                text-align: center;
+                width: 80%;
+                gap: 2px;
+                grid-template-columns: 150px 200px 200px;
+                grid-template-rows: 100px 100px auto auto;
+                grid-template-areas:
+                    "header header header header"
+                    "aside main main main"
+                    "aside main main main"
+                    "aside main main main"
+                    "footer footer footer footer";
+            }
+            header {
+                background-color: rgb(216, 216, 216);
+                grid-area: header;
+            }
+            aside {
+                background-color: khaki;
+                grid-area: aside;
+            }
+            main {
+                background-color: gold;
+                grid-area: main;
+            }
+            footer {
+                background-color: black;
+                color: white;
+                text-align: center;
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <!-- <nav> -->
+                <!-- <ul> -->
+                <a href="">Home</a>
+                <a href="">Daftar</a>
+                <a href="">Produk</a>
+                <a href="">Kontak</a>
+                <!-- </ul> -->
+                <!-- </nav> -->
+            </header>
+            <aside>
+                <p>Ini aside</p>
+            </aside>
+            <main>
+                <h3>Contoh penggunaan Grid Templete</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quia totam quasi, commodi ipsa asperiores perferendis id nam ullam aliquid ex alias magni ipsum, impedit nisi
+                    non quis amet! Dolore.
+                </p>
+            </main>
+            <footer>contoh footer</footer>
+        </div>
+    </body>
+</html>

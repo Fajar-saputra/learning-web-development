@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Z-index</title>
+        <style>
+            .kotak1 {
+                width: 200px;
+                height: 200px;
+                background-color: lawngreen;
+            }
+            .kotak2 {
+                background-color: khaki;
+                width: 250px;
+                height: 250px;
+                position: relative;
+                bottom: 200px;
+                z-index: -1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="kotak1"></div>
+        <div class="kotak2"></div>
+    </body>
+</html>

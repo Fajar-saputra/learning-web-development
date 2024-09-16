@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Grid Align Items</title>
+        <title>Grid Justify Sefl</title>
         <style>
             .container {
                 display: grid;
@@ -13,11 +13,9 @@
                 border: 1px solid black;
                 grid-template-columns: 120px 120px 120px;
                 grid-template-rows: 120px 120px 120px;
-                /* align-items: flex-end; */
-                /* align-items: flex-start; */
+                justify-items: center;
                 align-items: center;
-                /* align-items: baseline; */
-                /* align-items: stretch; */
+                justify-content: center;
             }
             .content {
                 background-color: rgb(164, 67, 255);
@@ -27,11 +25,20 @@
                 text-align: center;
                 color: white;
             }
+
+            .sefl {
+                /* justify-self: flex-start; */
+                /* justify-self: flex-end; */
+                justify-self: center;
+                /* align-self: flex-start; */
+                align-self: flex-end;
+                /* align-self: center; */
+            }
         </style>
     </head>
     <body>
         <div class="container">
-            <div class="content">1</div>
+            <div class="content sefl">1</div>
             <div class="content">2</div>
             <div class="content">3</div>
             <div class="content">4</div>

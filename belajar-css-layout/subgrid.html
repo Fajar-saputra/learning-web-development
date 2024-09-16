@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Subgrid</title>
+        <style>
+            .container {
+                width: 600px;
+                height: 600px;
+                background-color: darkorchid;
+                display: grid;
+                grid-template-columns: 100px 100px 100px 100px 100px;
+                grid-template-rows: 100px 100px 100px 100px 100px;
+            }
+            .content {
+                background-color: salmon;
+                border: 1px solid black;
+                display: grid;
+                grid-template-columns: subgrid;
+                grid-template-rows: subgrid;
+                grid-column: 3/6;
+                grid-row: 2/5;
+                gap: 0.5rem;
+            }
+            .inner {
+                background-color: lawngreen;
+                border: 1px solid black;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="inner">1</div>
+                <div class="inner">2</div>
+                <div class="inner">3</div>
+                <div class="inner">4</div>
+                <div class="inner">5</div>
+                <div class="inner">6</div>
+                <div class="inner">7</div>
+                <div class="inner">8</div>
+                <div class="inner">9</div>
+            </div>
+        </div>
+    </body>
+</html>
