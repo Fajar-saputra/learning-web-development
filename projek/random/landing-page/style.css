@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Relaway', sans-serif;
+}
+
+body {
+    background-color: rgb(239, 239, 239);
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    max-width: 1400px;
+    width: 90%;
+    border-radius: 5px;
+    margin: 0 auto;
+    /* background-color: rgb(255, 145, 0); */
+    background: linear-gradient(95deg, rgb(255, 149, 0)80%, rgb(255, 200, 0));
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+}
+
+.navbar ul li {
+    padding: .5rem 0;
+    border-bottom: 2px solid transparent;
+    transition: all .5s ease-in-out;
+}
+
+.navbar ul li:hover {
+    border-color: black;
+}
+
+.navbar ul li a {
+    color: white;
+    font-weight: bold;
+    text-shadow: 5px 5px 5px black;
+}
+
+.navbar .logo h1 {
+    font-weight: bolder;
+    color: white;
+    text-shadow: 5px 5px 5px black;
+    cursor: pointer;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .hero-deskripsi {
+    width: 70%;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.hero .hero-deskripsi h1 {
+    font-size: 3rem;
+}
+
+.hero .hero-deskripsi span {
+    color: white;
+}
