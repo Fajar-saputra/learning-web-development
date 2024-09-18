@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+    --primaryTextColor: #232e35;
+    --secondaryTextColor: #656d72;
+
+
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+
+    --primaryBackgroundColor: #33ff00;
+    --secondaryBackgroundColor: #6dff5c;
+
+    --sectionPadding: 0 5rem;
+
+    --itemBorderRadius: 0.7rem;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--primaryTextColor);
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.9rem;
+}
+
+p,
+span,
+label,
+input,
+textarea,
+li {
+    color: var(--primaryTextColor);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* Style Medsos*/
+.medsos ul {
+    padding: var(--sectionPadding);
+    display: flex;
+    background-color: var(--primaryBackgroundColor);
+}
+
+.medsos ul li {
+    padding: 1rem 0;
+    outline: 1px solid black;
+}
+
+/* Style Navbar*/
+header .navbar {
+    padding: var(--sectionPadding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar ul {
+    display: flex;
+}
+
+header .navbar ul li a {
+    padding: 1rem;
+    transition: all .4s ease-in-out;
+    font-size: .9rem;
+    outline: 1px solid red;
+}
+
+header .navbar ul li .active {
+    background-color: var(--primaryBackgroundColor);
+}
+
+header .navbar ul li a:hover {
+
+    background-color: var(--secondaryBackgroundColor);
+}

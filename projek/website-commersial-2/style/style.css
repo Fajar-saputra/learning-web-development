@@ -1,0 +1,50 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Viga:wght@400;500;600;700;800&display=swap");
+
+/* VARIABEL */
+:root {
+    --primary-color: #fb6a27;
+    --dark-color: #0f0f0f;
+    --gray-color: gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+
+/* GOBAL CSS */
+* {
+    font-family: Viga, sans-serif;
+}
+
+.fs-7 {
+    font-size: 12px;
+}
+
+.tombol {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9edef;
+    border-radius: 0.3rem;
+}
+
+/* Navbar */
+
+/* Desktop versian */
+@media (min-width: 992px) {
+    .nav-link {
+        transition: 0.5s;
+    }
+
+    .nav-link:hover::after {
+        content: "";
+        display: block;
+        margin-bottom: -6px;
+        border-bottom: 2px solid rgb(0, 89, 255);
+    }
+}

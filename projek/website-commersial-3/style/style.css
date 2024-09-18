@@ -1,0 +1,303 @@
+:root {
+    --primary: #c78542;
+    --bg: #010101;
+    --sectionPadding: 1rem 7%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--sectionPadding);
+    border-bottom: 1px solid var(--primary);
+    background-color: rgba(1, 1, 1, 0.8);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.navbar .navbar-logo span {
+    font-style: italic;
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+    margin: 0 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav a:hover {
+    color: #c78542;
+}
+
+.navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.3rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scale(0);
+    transition: 0.3s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scale(0.8);
+}
+
+.navbar-extra a i {
+    font-size: 1.5rem;
+    padding: .5rem;
+    border-radius: 5px;
+    background-color: #fff;
+    color: var(--bg);
+}
+
+#hamberger-menu {
+    display: none;
+}
+
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: url(../images/kopi-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(0deg, rgba(1, 1, 1, 1) 10%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+    padding: var(--sectionPadding);
+    max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, .5);
+    line-height: 1;
+}
+
+.hero .content span {
+    color: #c78542;
+}
+
+.hero .content p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, .5);
+    line-height: 1.2;
+    margin: .7rem 0;
+    mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+    font-size: 1.5rem;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: #c78542;
+    border-radius: .5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+.about,
+.menu,
+.contact {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.contact h2 span {
+    color: #c78542;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+    width: 100%;
+}
+
+.about .row .about-content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .about-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.about .about-content p {
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+/* Menu Section */
+.menu {
+    margin-bottom: 0;
+}
+
+.menu p,
+.contact p {
+
+    text-align: center;
+    font-weight: 100;
+    max-width: 35rem;
+    margin: -2rem auto 0;
+    line-height: 1.5;
+}
+
+/* Menu Section */
+.menu .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.menu .row .menu-card {
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+}
+
+.menu .row .menu-card .menu-card-title {
+    margin: 1rem 0;
+}
+
+/* Contact Section */
+.contact .row {
+    background-color: #222;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.contact .row .map {
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contact .row form {
+    flex: 1 1 45rem;
+    text-align: center;
+    padding: 4rem 1.5rem;
+}
+
+.contact .row form .input-grup {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    background-color: #010101;
+    border: .1rem solid #eee;
+    padding-left: 2rem;
+}
+
+.contact .row form .input-grup input,
+.contact .row form .input-grup textarea {
+    width: 100%;
+    padding: 1rem;
+    background: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.contact .row form .input-grup textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.contact .row form button {
+    margin-top: 2rem;
+    padding: 1rem 3rem;
+    color: #fff;
+    background-color: #c78542;
+}
+
+/* Footer */
+footer {
+    padding: 1rem 7%;
+    color: rgb(184, 184, 184);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+    cursor: pointer;
+}
+
+footer i {
+    padding: .2rem;
+    border: .1rem solid #eee;
+    margin: 0 .2rem;
+    border-radius: 50%;
+    cursor: pointer;
+}

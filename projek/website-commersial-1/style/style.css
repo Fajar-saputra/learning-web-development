@@ -1,0 +1,143 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* VARIABEL */
+:root {
+    --primary-color: #00ff37;
+    --dark-color: #0f0f0f;
+    --gray-color: gray;
+    --color-hover: rgb(68, 255, 0);
+    --line-color: rgb(0, 255, 13);
+
+    --h1-font-size: 40px;
+    --h2-font-size: 25px;
+    --small-font-size: 14px;
+}
+/* RESET CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: white;
+    margin-top: 60px;
+}
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 14px;
+    color: rgb(95, 95, 95);
+}
+
+/* GOBAL CSS */
+section {
+    padding: 50px 0;
+}
+
+.section-title {
+    font-size: var(--h1-font-size);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.section-brand {
+    font-size: var(--h1-font-size);
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.fs-7 {
+    font-size: 14px;
+}
+
+.star-point {
+    color: orange;
+}
+
+.text-green {
+    color: rgb(0, 198, 0);
+}
+
+/* CSS PER SECTION */
+/* NAVBAR */
+
+.bg-navbar {
+    background-color: rgb(0, 255, 0);
+}
+
+.navbar .navbar-brand:hover,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+    color: var(--primary-color);
+}
+
+/* Section Header */
+#home {
+    background-color: rgb(210, 223, 228);
+}
+
+.home-section .section-title {
+    color: rgb(0, 198, 0);
+}
+
+.home-section .img-cover {
+    width: 100%;
+    min-width: 40%;
+}
+
+/* Collections */
+.collection-section .card i {
+    color: #a9a9a9;
+}
+
+.collection-section .card .star-point {
+    color: orange;
+}
+
+.collection-section .card {
+    cursor: pointer;
+}
+
+.collection-section .card:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+/* The Best */
+#theBest,
+#event {
+    background-color: rgb(210, 223, 228);
+}
+
+.theBest-section .btn-buy {
+    padding: 0.4rem 2rem;
+    font-weight: 700;
+    background-color: rgb(0, 198, 0);
+    color: white;
+    border: none;
+    transition: 0.3s;
+}
+
+.theBest-section .btn-buy:hover {
+    background-color: #00ff15;
+}
+
+/* Footer */
+footer {
+    background-color: #0f0f0f;
+    color: rgb(184, 184, 184);
+}
+
+footer i {
+    color: rgb(184, 184, 184);
+}
