@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style: none;
+}
+
 header {
     max-width: 1400px;
     width: 90%;
@@ -77,6 +81,21 @@ header {
     font-size: 3rem;
 }
 
+.hero .hero-deskripsi p {
+    margin: 1.5rem 0;
+
+}
+
 .hero .hero-deskripsi span {
     color: white;
 }
+
+
+.input-search,
+.button-search {
+    border: none;
+    outline: none;
+    padding: .5rem 2rem;
+    background-color: white;
+}
+
