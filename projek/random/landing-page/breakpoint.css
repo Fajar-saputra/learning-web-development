@@ -1,14 +1,36 @@
 /* exstra small devices */
-@media screen and (max-width:600px) {}
+@media screen and (max-width:600px) {
+    body {
+        background-color: red;
+    }
+}
 
 /* small devices */
-@media screen and (min-width:600px) {}
+@media screen and (min-width:600px) {
+    body {
+        body {
+            background-color: rgb(9, 255, 0);
+        }
+    }
+}
 
 /* medium devices */
-@media screen and (min-width:768) {}
+@media screen and (min-width:768px) {
+    body {
+        background-color: rgb(85, 0, 255);
+    }
+}
 
 /* large devices */
-@media screen and (min-width:992) {}
+@media screen and (min-width:992px) {
+    body {
+        background-color: black;
+    }
+}
 
 /* extra large devices */
-@media screen and (min-width:1200px) {}
+@media screen and (min-width:1200px) {
+    body {
+        background-color: rgb(255, 0, 162);
+    }
+}
