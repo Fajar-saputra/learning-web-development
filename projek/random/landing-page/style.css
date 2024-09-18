@@ -6,7 +6,7 @@
 }
 
 body {
-    /* background-color: rgb(239, 239, 239); */
+    background-color: rgb(223, 223, 223);
 }
 
 a {
@@ -22,7 +22,6 @@ header {
     width: 90%;
     border-radius: 5px;
     margin: 0 auto;
-    /* background-color: rgb(255, 145, 0); */
     background: linear-gradient(95deg, rgb(255, 149, 0)80%, rgb(255, 200, 0));
     height: 100vh;
 }
@@ -31,59 +30,72 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .navbar ul {
     display: flex;
     list-style-type: none;
     gap: 1.5rem;
+    display: none;
 }
 
 .navbar ul li {
     padding: .5rem 0;
-    border-bottom: 2px solid transparent;
     transition: all .5s ease-in-out;
 }
 
 .navbar ul li:hover {
-    border-color: black;
+    text-shadow: 5px 5px 5px black;
+    transform: translate(-5px, -5px);
 }
 
 .navbar ul li a {
     color: white;
     font-weight: bold;
-    text-shadow: 5px 5px 5px black;
 }
 
 .navbar .logo h1 {
-    font-weight: bolder;
+    font-weight: bold;
     color: white;
     text-shadow: 5px 5px 5px black;
     cursor: pointer;
 }
 
+/* Hamberger Menu */
+.hamberger-menu {
+    display: block;
+}
+
+.hamberger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
 .hero {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     height: 80vh;
     justify-content: center;
     align-items: center;
 }
 
 .hero .hero-deskripsi {
-    width: 25rem;
-    text-align: justify;
+    text-align: center;
     line-height: 1.5;
 }
 
 .hero .hero-deskripsi h1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .hero .hero-deskripsi p {
-    margin: 1.5rem 0;
-    width: 25rem;
+    margin: 1rem auto 1.3rem;
+    font-size: .8rem;
+    width: 90%;
+    max-width: 25rem;
 }
 
 .hero .hero-deskripsi span {
@@ -102,7 +114,8 @@ header {
 .button-search {
     border: none;
     outline: none;
-    padding: .8rem 2rem;
+    /* padding: .8rem 2rem; */
+    padding: .5rem 1rem;
     background-color: white;
     transition: .3s ease-in-out;
 }

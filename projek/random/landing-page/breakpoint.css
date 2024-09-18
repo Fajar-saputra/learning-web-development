@@ -1,36 +1,77 @@
 /* exstra small devices */
 @media screen and (max-width:600px) {
-    body {
-        background-color: red;
+    .hamberger-menu {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+    .hero .hero-deskripsi {
+        text-align: center;
+    }
+
+    .hero .hero-deskripsi h1 {
+        font-size: 2rem;
     }
 }
 
 /* small devices */
 @media screen and (min-width:600px) {
-    body {
-        body {
-            background-color: rgb(9, 255, 0);
-        }
+    .hamberger-menu {
+        display: block;
     }
+
 }
 
 /* medium devices */
 @media screen and (min-width:768px) {
-    body {
-        background-color: rgb(85, 0, 255);
+    .hamberger-menu {
+        display: none;
+    }
+
+    .navbar ul {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero .hero-deskripsi {
+        text-align: left;
+    }
+
+    .hero .hero-deskripsi h1 {
+        font-size: 3rem;
+    }
+
+    .hero .hero-deskripsi p {
+        margin: .3rem 0 1.3rem;
+        font-size: .85rem;
     }
 }
 
 /* large devices */
 @media screen and (min-width:992px) {
-    body {
-        background-color: black;
+    .hero .hero-deskripsi h1 {
+        font-size: 3rem;
+    }
+
+    .hero .hero-deskripsi p {
+        margin: .3rem 0 1.3rem;
+        font-size: .85rem;
     }
 }
 
 /* extra large devices */
 @media screen and (min-width:1200px) {
-    body {
-        background-color: rgb(255, 0, 162);
+    .hero .hero-deskripsi h1 {
+        font-size: 3.5rem;
     }
 }
