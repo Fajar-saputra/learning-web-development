@@ -8,12 +8,14 @@
     --borderColor: #f1f1f1;
     --lineColor: #d9d9d9;
 
-    --primaryBackgroundColor: #33ff00;
-    --secondaryBackgroundColor: #6dff5c;
+    --primaryBackgroundColor: #000;
+    --secondaryBackgroundColor: #919191;
 
     --sectionPadding: 0 5rem;
 
     --itemBorderRadius: 0.7rem;
+
+    --fontFamily: mv boli, sans-serif;
 
 }
 
@@ -62,16 +64,21 @@ li {
 
 
 /* Style Medsos*/
-.medsos ul {
+.medsos {
     padding: var(--sectionPadding);
-    display: flex;
     background-color: var(--primaryBackgroundColor);
 }
 
-.medsos ul li {
-    padding: 1rem 0;
-    outline: 1px solid black;
+header .medsos a i {
+    font-size: 1.5rem;
+    padding: .4rem;
+    color: white;
 }
+
+header .medsos a i:hover {
+    box-shadow: 3px 3px 5px black;
+}
+
 
 /* Style Navbar*/
 header .navbar {
@@ -81,22 +88,55 @@ header .navbar {
     align-items: center;
 }
 
-header .navbar ul {
+header .logo {
+    font-family: var(--fontFamily);
+    font-size: 1.5rem;
+}
+
+.navbar ul {
     display: flex;
 }
 
-header .navbar ul li a {
-    padding: 1rem;
-    transition: all .4s ease-in-out;
+.navbar ul li a {
+    padding: 1.3rem;
     font-size: .9rem;
-    outline: 1px solid red;
+    transition: .3s linear;
 }
 
-header .navbar ul li .active {
+.navbar ul li a:hover {
     background-color: var(--primaryBackgroundColor);
+    color: white;
 }
 
-header .navbar ul li a:hover {
+.active {
+    background-color: var(--primaryBackgroundColor);
+    color: white;
+}
 
-    background-color: var(--secondaryBackgroundColor);
+.navbar .hamberger-menu {
+    display: none;
+}
+
+/* Hero */
+.hero-section {
+    position: relative;
+}
+
+.hero-section a {
+    color: white;
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    left: 40%;
+    padding: 1.5rem 2.3rem;
+    border: 3px solid white;
+}
+
+.hero-section img {
+    width: 100%;
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+    filter: blur(1.5px);
+    /* filter: brightness(5); */
 }
