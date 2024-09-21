@@ -1,6 +1,6 @@
 :root {
-    --primaryColorBg: #ffd500;
-    --hoverColor: #ffc42f;
+    --primaryColorBg: #ffb300;
+    --hoverColor: #ffd365;
     --sizeFont: 1rem;
     --sectionPadding: 5rem 0 0 0;
     --fontFamily: mv boli, sans-serif;
@@ -62,6 +62,7 @@ html {
 /* Class button */
 .btn-order {
     color: white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 1);
     border: none;
     padding: .5rem 2rem;
     font-size: medium;
@@ -75,9 +76,11 @@ html {
     background-color: var(--hoverColor);
     box-shadow: 5px 5px 0 rgba(0, 0, 0, .2);
     transform: translate(-5px, -5px);
+    color: black;
+    text-shadow: none;
 }
 
-/* Class section-about */
+/* Class section-title */
 .section-title {
     font-size: 4rem;
     text-align: center;
@@ -86,17 +89,41 @@ html {
 .section-title span {
     font-family: var(--fontFamily);
     color: var(--primaryColorBg);
+    position: relative;
 }
 
-#home {
-    padding: var(--sectionPadding);
-}
-
-#about {
-
-    height: calc(100vh-var(var(--sectionPadding)));
+.section-title span::after {
+    content: '';
+    display: block;
     width: 100%;
+    height: 3px;
+    background-color: #fac031;
+    position: absolute;
+    top: 80%;
+    left: 0;
 }
+
+/* Style id */
+#home,
+#about,
+#menu,
+#gallery,
+#review,
+#order {
+    padding: var(--sectionPadding);
+    height: auto;
+}
+
+/* Class grid-container */
+.grid-container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
 
 /* Navigation */
 .navbar {
@@ -228,14 +255,6 @@ main .main-image img {
 }
 
 /* Section Menu */
-.section-menu .grid-container {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 1rem;
-}
-
-
 .section-menu .card-menu {
     text-align: center;
     padding: 1rem 1rem 2rem;
@@ -307,6 +326,170 @@ main .main-image img {
 
 }
 
-/* .section-menu .grid-container .card-menu .btn-card a:hover {
-    color: black;
+/* Section Gallery */
+.section-gallery .grid-container {
+    gap: .5rem;
+}
+
+.section-gallery .grid-container .grid-box {
+    position: relative;
+    background-color: black;
+}
+
+.section-gallery .grid-container .grid-box-image img {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.section-gallery .grid-container .box-deskripsi {
+    height: 100%;
+    text-align: center;
+}
+
+.section-gallery .grid-container .box-deskripsi {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.section-gallery .grid-container .box-deskripsi h1 {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: var(--primaryColorBg);
+    font-family: var(--fontFamily);
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(-45px);
+    transition: .3s ease-in-out;
+}
+
+.section-gallery .grid-container .box-deskripsi p {
+    color: white;
+    margin: 1.7rem 0 2rem;
+    z-index: 5;
+    opacity: 0;
+    transform: scale(0);
+    transition: .3s ease-in-out;
+}
+
+.section-gallery .grid-container .box-deskripsi .btn-gallery {
+    background-color: var(--hoverColor);
+    border: none;
+    border-radius: 3px;
+    padding: .5rem 2rem;
+    font-family: var(--fontFamily);
+    font-weight: bold;
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(45px);
+    transition: .2s ease-in-out;
+}
+
+
+.section-gallery .grid-container .grid-box:hover img {
+    opacity: .5;
+}
+
+.section-gallery .grid-container .grid-box:hover h1 {
+
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-gallery .grid-container .grid-box:hover p {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.section-gallery .grid-container .grid-box:hover .btn-gallery {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section-gallery .grid-container .box-deskripsi .btn-gallery:hover {
+    background-color: var(--primaryColorBg);
+}
+
+/* Section review */
+.section-review .grid-review {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1rem;
+    width: 95%;
+    margin: 2rem auto 0;
+}
+
+.section-review .grid-review .grid-review-box {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 1rem 1.5rem;
+    text-align: center;
+}
+
+.section-review .grid-review .grid-review-box .picture-box {
+    margin-bottom: 1rem;
+    transition: all .3s ease-in-out;
+}
+
+.section-review .grid-review .grid-review-box .picture-box:hover {
+    transform: translateY(-45px);
+}
+
+.section-review .grid-review .grid-review-box .picture-box img {
+    width: 85%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid rgba(0, 0, 0, .4);
+}
+
+.section-review .grid-review .grid-review-box .picture-box .name {
+    font-family: var(--fontFamily);
+}
+
+/* Section Order */
+/* .section-order {
+    background-image: url(images/background/bg2.png);
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-size: cover;
+    background-position: center;
 } */
+
+.section-order .grid-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-order .grid-order .form-input-1 label {
+    font-size: 1rem;
+}
+
+.section-order .grid-order .form-input-1 {
+    flex: 1;
+}
+
+.section-order .grid-order .image-order {
+    flex: 1;
+    outline: 1px solid red;
+}
+
+.section-order .grid-order .image-order img {
+    width: 100%;
+}
+
+.section-order .grid-order .form-input-1 .form-input-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    outline: 1px solid blue;
+    gap: 1rem;
+    padding: 1rem;
+    /* justify-content: start; */
+}
+
+.section-order .grid-order .form-input-1 .form-input-2 input {
+    width: 100%;
+}
