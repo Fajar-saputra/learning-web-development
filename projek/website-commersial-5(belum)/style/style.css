@@ -500,12 +500,22 @@ main .main-image img {
 }
 
 /* Section Our team */
+#ourTeam {
+    height: auto;
+    /* padding: 4rem 0 2.5rem; */
+}
+
 .section-ourTeam {
     background-image: url("/images/background/bg1.jpg");
     background-position: center;
     background-size: cover;
+    padding: 4rem 0 5rem;
     width: 100%;
     height: fit-content;
+}
+
+.section-ourTeam .section-title {
+    padding-bottom: 5rem;
 }
 
 .section-ourTeam .grid-ourTeam {
@@ -612,6 +622,24 @@ footer .footer-container .footer_tag a {
     display: block;
     margin-bottom: .7rem;
 }
+
+footer .footer-container .footer-sosmed {
+    display: block;
+}
+
+footer .footer-container .footer-sosmed i {
+    padding: .5rem;
+    border: 1px solid var(--primaryColorBg);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+footer .footer-container .footer-sosmed i:hover {
+    box-shadow: 0 0 10px var(--primaryColorBg);
+}
+
+
+
 
 footer .footer-container .footer_tag ul li,
 footer .footer-container .footer_tag p,
