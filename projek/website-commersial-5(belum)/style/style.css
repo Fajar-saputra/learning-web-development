@@ -113,6 +113,10 @@ html {
     height: auto;
 }
 
+#hamburger-menu {
+    display: inline-block;
+}
+
 /* Class grid-container */
 .grid-container {
     display: grid;
@@ -127,7 +131,7 @@ html {
 /* Navigation */
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -135,7 +139,7 @@ html {
     left: 0;
     top: 0;
     right: 0;
-    padding: .5rem 0;
+    padding: .5rem;
     z-index: 999;
 }
 
@@ -148,18 +152,20 @@ html {
 }
 
 
-.navbar ul li {
-    display: inline-block;
-    margin: 0 1rem;
+.navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-.navbar ul li a {
+.navbar .navbar-nav li a {
     font-size: var(--sizeFont);
     font-weight: 500;
     transition: .2s linear;
 }
 
-.navbar ul li a::after {
+.navbar .navbar-nav li a::after {
     content: '';
     display: block;
     height: 2px;
@@ -168,11 +174,11 @@ html {
     transition: .2s linear;
 }
 
-.navbar ul li a:hover::after {
+.navbar .navbar-nav li a:hover::after {
     width: 100%;
 }
 
-.navbar ul li a:hover {
+.navbar .navbar-nav li a:hover {
     color: var(--primaryColorBg);
 }
 
@@ -638,10 +644,7 @@ footer .footer-container .footer-sosmed i:hover {
     box-shadow: 0 0 10px var(--primaryColorBg);
 }
 
-
-
-
-footer .footer-container .footer_tag ul li,
+footer .footer-container .footer_tag .navbar-nav li,
 footer .footer-container .footer_tag p,
 footer .footer-container .footer_tag i {
     margin-bottom: .7rem;
@@ -660,4 +663,13 @@ footer .madeIn {
 footer .madeIn span {
     color: var(--primaryColorBg);
     font-family: var(--fontFamily);
+}
+
+#keterangan {
+    background-color: #000;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 }
