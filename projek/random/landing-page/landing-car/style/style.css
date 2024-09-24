@@ -1,0 +1,228 @@
+:root {
+    --colorPrimary: #ff7200;
+    --sectionPadding: 1rem 3rem
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+
+    background: url(/image/super-car.jpg);
+    background: linear-gradient(to top, rgba(0, 0, 0, .5)50%, rgba(0, 0, 0, .7)50%), url(/image/super-car.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    height: 100vh;
+    margin: auto;
+    max-width: 1200px;
+    width: 90%;
+}
+
+li {
+    list-style: none;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header .navbar .nav-logo {
+    font-family: monotype corsiva, sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+header .navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header .navbar .navbar-nav .active {
+    color: var(--colorPrimary);
+}
+
+header .navbar .navbar-nav li a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+header .navbar .navbar-nav li a:hover {
+    color: var(--colorPrimary);
+}
+
+header .navbar .navbar-nav li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: var(--colorPrimary);
+    transition: .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+header .navbar .navbar-nav li a:hover::after {
+    width: 100%;
+    transform: scaleX(1);
+}
+
+header .navbar form input {
+    padding: .6rem 1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+header .navbar form input:focus {
+    box-shadow: 0 0 10px var(--colorPrimary);
+
+}
+
+header .navbar form button {
+    padding: .6rem 1rem;
+    border-radius: 3px;
+    border: none;
+    background-color: var(--colorPrimary);
+    transition: .2s all ease-in-out;
+}
+
+header .navbar form button:hover {
+    background-color: white;
+}
+
+main .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 90vh;
+    width: 100%;
+}
+
+main .container .container-left {
+    flex: 1.5;
+}
+
+main .container .container-right {
+    flex: 1;
+}
+
+main .container .container-left .main-title h1 {
+    font-size: 3rem;
+    line-height: .9;
+    margin-bottom: 1rem;
+}
+
+main .container .container-left .main-title span {
+    font-size: 4rem;
+    color: var(--colorPrimary);
+}
+
+main .container .container-left .join-button {
+    /* padding: 1rem 2rem; */
+    margin-top: 2rem;
+}
+
+main .container .container-left .join-button a {
+    padding: .8rem 2.5rem;
+    color: black;
+    background-color: var(--colorPrimary);
+    transition: .3s ease-in-out;
+}
+
+main .container .container-left .join-button a:hover {
+    background-color: white;
+}
+
+main .container .container-right .box-login {
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, .8)50%, rgba(0, 0, 0, .8)50%);
+    margin: auto;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main .container .container-right .box-login h2 {
+    color: var(--colorPrimary);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    padding: .5rem 0;
+    margin-bottom: 1rem;
+}
+
+main .container .container-right .box-login form input {
+    width: 100%;
+    color: white;
+    padding: 1rem .5rem;
+    background-color: transparent;
+    /* margin-bottom: 1rem; */
+    border: none;
+    border-bottom: 1px solid var(--colorPrimary);
+}
+
+main .container .container-right .box-login form input::placeholder {
+    color: rgb(255, 255, 255, .8);
+}
+
+main .container .container-right .box-login form input:focus {
+    outline: none;
+}
+
+main .container .container-right .box-login form button {
+    margin: 1rem 0;
+    width: 100%;
+    cursor: pointer;
+    padding: .5rem 0;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--colorPrimary);
+    transition: all .3s ease-in-out;
+}
+
+main .container .container-right .box-login form button:hover {
+    background-color: white;
+    color: black;
+}
+
+main .container .container-right .box-login a {
+    color: red;
+    font-weight: bold;
+}
+
+main .container .container-right .box-login .login-icon p {
+    margin: 1rem 0;
+}
+
+main .container .container-right .box-login .login-icon i {
+    font-size: 2rem;
+    margin: 0 .4rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+main .container .container-right .box-login .login-icon i:hover {
+    color: var(--colorPrimary);
+}
