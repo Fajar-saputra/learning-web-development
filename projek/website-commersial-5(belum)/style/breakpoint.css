@@ -3,6 +3,7 @@
     #hamburger-menu {
         display: inline-block;
     }
+
 }
 
 /* small devices */
@@ -10,7 +11,6 @@
     #hamburger-menu {
         display: inline-block;
     }
-
 }
 
 /* medium devices */
@@ -33,10 +33,23 @@
     .navbar .nav-logo .logo-larga {
         display: none;
     }
+
 }
 
 /* large devices */
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+    .navbar .nav-logo .logo-mark {
+        display: none;
+    }
+
+    .navbar .nav-logo .logo-larga {
+        display: inline-block;
+    }
+}
+
+
+
+
 
 /* extra large devices */
 @media screen and (min-width:1200px) {}
