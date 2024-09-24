@@ -1,72 +1,42 @@
 /* exstra small devices */
 @media screen and (max-width:600px) {
-    #keterangan {
-        background-color: red;
+    #hamburger-menu {
+        display: inline-block;
     }
-
-
-
-    .navbar .navbar-nav {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30vw;
-        height: 100vh;
-        transition: 0.3s ease-in-out;
-    }
-
-    .navbar .navbar-nav.active {
-        right: 0;
-    }
-
 }
 
 /* small devices */
 @media screen and (min-width:600px) {
-    #keterangan {
-        background-color: blue;
+    #hamburger-menu {
+        display: inline-block;
     }
 
-    .navbar .navbar-nav {
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: -100%;
-        background-color: #fff;
-        width: 30vw;
-        height: 100vh;
-        transition: 0.3s ease-in-out;
-    }
-
-    .navbar .navbar-nav.active {
-        right: 0;
-    }
 }
 
 /* medium devices */
 @media screen and (min-width:768px) {
-    #keterangan {
-        background-color: orange;
-    }
-
-}
-
-/* large devices */
-@media screen and (min-width:992px) {
-    #keterangan {
-        background-color: violet;
-    }
-
     #hamburger-menu {
+        display: none;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: row;
+        position: static;
+        width: inherit;
+        height: inherit;
+    }
+
+    .navbar .nav-logo .logo-mark {
+        display: inline-block;
+    }
+
+    .navbar .nav-logo .logo-larga {
         display: none;
     }
 }
 
+/* large devices */
+@media screen and (min-width:992px) {}
+
 /* extra large devices */
-@media screen and (min-width:1200px) {
-    #keterangan {
-        background-color: greenyellow;
-    }
-}
+@media screen and (min-width:1200px) {}

@@ -139,7 +139,7 @@ html {
     left: 0;
     top: 0;
     right: 0;
-    padding: .5rem;
+    padding: .5rem 1rem;
     z-index: 999;
 }
 
@@ -152,11 +152,38 @@ html {
 }
 
 
+/* .navbar .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+} */
+
+.navbar .nav-logo .logo-mark {
+    display: none;
+}
+
+.navbar .nav-logo .logo-larga {
+    display: inline-block;
+}
+
 .navbar .navbar-nav {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30vw;
+    height: 100vh;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .navbar-nav.active {
+    right: 0;
 }
 
 .navbar .navbar-nav li a {
