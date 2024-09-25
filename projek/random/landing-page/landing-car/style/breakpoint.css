@@ -1,0 +1,75 @@
+/* exstra small devices */
+@media screen and (max-width:600px) {
+    header .navbar .navbar-icon {
+        display: inline-block;
+    }
+
+    header .navbar form {
+        display: none;
+    }
+
+    #classKeterangan {
+        background-color: white;
+    }
+
+}
+
+/* small devices */
+@media screen and (min-width:600px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    #classKeterangan {
+        background-color: red;
+    }
+}
+
+/* medium devices */
+@media screen and (min-width:768px) {
+    #classKeterangan {
+        background-color: yellow;
+    }
+
+    #hamburger-menu {
+        display: none;
+    }
+
+    .navbar .navbar-nav {
+        flex-direction: row;
+        position: static;
+        width: inherit;
+        height: inherit;
+    }
+
+    .navbar .nav-logo .logo-mark {
+        display: inline-block;
+    }
+
+    .navbar .nav-logo .logo-larga {
+        display: none;
+    }
+
+}
+
+/* large devices */
+@media screen and (min-width:992px) {
+    #classKeterangan {
+        background-color: green;
+    }
+
+    .navbar .nav-logo .logo-mark {
+        display: none;
+    }
+
+    .navbar .nav-logo .logo-larga {
+        display: inline-block;
+    }
+}
+
+/* extra large devices */
+@media screen and (min-width:1200px) {
+    #classKeterangan {
+        background-color: aqua;
+    }
+}
