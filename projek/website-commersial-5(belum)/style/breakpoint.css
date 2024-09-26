@@ -4,6 +4,37 @@
         display: inline-block;
     }
 
+    main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    main .main-image {
+        order: -1;
+    }
+
+    main .main-text h1 {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .section-order .grid-order {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .section-order .grid-order .order-image img {
+        width: 80%;
+    }
+
 }
 
 /* small devices */
@@ -11,10 +42,15 @@
     #hamburger-menu {
         display: inline-block;
     }
+
+    main .main-text h1 {
+        background-color: rgb(0, 255, 98);
+    }
 }
 
 /* medium devices */
 @media screen and (min-width:768px) {
+
     #hamburger-menu {
         display: none;
     }
@@ -34,10 +70,18 @@
         display: none;
     }
 
+    main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 /* large devices */
 @media screen and (min-width:992px) {
+    main .main-text h1 {
+        background-color: rgb(72, 0, 255);
+    }
+
     .navbar .nav-logo .logo-mark {
         display: none;
     }
@@ -49,3 +93,7 @@
 
 /* extra large devices */
 @media screen and (min-width:1200px) {}
+
+main .main-text h1 {
+    background-color: rgb(242, 255, 0);
+}
