@@ -2,10 +2,17 @@
 const searchBox = document.querySelector(".search-box");
 
 document.querySelector("#search-icon").onclick = () => {
-    navbarNav.classList.toggle("active");
+    searchBox.classList.toggle("active");
 };
 
-console.log(searchBox);
+// ketika klik diluar sidebar
+const navbarIcon = document.querySelector("#search-icon");
+
+document.addEventListener("click", function (e) {
+    if (!navbarIcon.contains(e.target) && !searchBox.contains(e.target)) {
+        searchBox.classList.remove("active");
+    }
+});
 
 // toggle
 // const navbarNav = document.querySelector(".navbar-nav");

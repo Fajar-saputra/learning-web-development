@@ -140,10 +140,20 @@ section {
 .navbar .search-box {
     position: absolute;
     top: 100%;
-    left: 50%;
+    /* left: -100%; */
     background-color: var(--bg-color);
-    transform: translate(-50%);
+    width: 0;
+    opacity: 0;
+    transform: translate(50%);
+}
+
+.navbar .search-box.active {
     width: 100%;
+    left: 0;
+    opacity: 1;
+    transform: scaleX(1);
+    box-shadow: var(--box-shadow);
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
 }
 
 .navbar .search-box input {
@@ -153,12 +163,6 @@ section {
     outline: none;
     font-size: 1rem;
     color: var(--primary-color);
-}
-
-.navbar .search-box input.active {
-    top: 110%;
-    box-shadow: var(--box-shadow);
-    transition: .2s linear all;
 }
 
 .navbar .search-box input::placeholder {
