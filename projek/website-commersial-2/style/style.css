@@ -66,20 +66,13 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.3rem 6.25rem;
+    padding: 1.3rem 7%;
     transition: .3s linear;
     background-color: var(--text-color);
 }
 
 .navbar .nav-brand {
     width: 60px;
-}
-
-.navbar .navbar-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
 }
 
 .navbar .nav-brand {
@@ -93,7 +86,9 @@ section {
     color: var(--primary-color);
 }
 
-.navbar .navbar-nav li a {
+.navbar .navbar-nav a {
+    display: inline-block;
+    margin: 0 .3rem;
     color: var(--bg-color);
     font-size: .9rem;
     text-transform: uppercase;
@@ -101,24 +96,25 @@ section {
     position: relative;
 }
 
-.navbar .navbar-nav li a::after {
+.navbar .navbar-nav a::after {
     content: '';
+    position: absolute;
     display: block;
     width: 0;
     height: 2px;
     background-color: var(--primary-color);
-    position: absolute;
     bottom: -5px;
     left: 0;
     z-index: 9;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .4s;
 }
 
-.navbar .navbar-nav li a:hover {
+.navbar .navbar-nav a:hover,
+footer .copyright p:hover {
     color: var(--primary-color);
 }
 
-.navbar .navbar-nav li a:hover::after {
+.navbar .navbar-nav a:hover::after {
     width: 100%;
     transform: scaleX(1);
 }
@@ -139,7 +135,7 @@ section {
 #hamburger-menu {
     color: var(--bg-color);
     font-size: 1.5rem;
-    z-index: 9999;
+    z-index: 999999;
     cursor: pointer;
     display: none;
 }
@@ -201,7 +197,7 @@ section {
 .hero .hero-text p {
     font-size: .9rem;
     color: var(--bg-color);
-    margin: .5rem 0 1.5rem;
+    margin: .8rem 0 1.8rem;
 }
 
 .btn {
@@ -419,4 +415,5 @@ footer .copyright p {
     font-size: .7rem;
     font-style: italic;
     text-align: center;
+    transition: all .3s ease-in-out;
 }

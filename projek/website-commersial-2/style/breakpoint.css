@@ -1,0 +1,119 @@
+/* exstra small devices */
+@media screen and (max-width:600px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    section {
+        padding: 30px 10%;
+    }
+
+    .navbar .navbar-nav {
+        padding: 3rem 0 0 1rem;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 35%;
+        height: 100vh;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 1rem 0;
+        transform: translateY(50%);
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        width: 50%;
+    }
+
+
+    /* AMAN */
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .hero .hero-image {
+        order: -1;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+/* small devices */
+@media screen and (min-width:600px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        padding: 3rem 0 0 1rem;
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 35%;
+        height: 100vh;
+        transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 1rem 0;
+        transform: translateY(50%);
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        width: 50%;
+    }
+
+    /* AMAN */
+    .hero .hero-image {
+        order: -1;
+        width: 90%;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 2rem;
+    }
+}
+
+/* medium devices */
+@media screen and (min-width:768px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    /* AMAN */
+    .hero .hero-image {
+        order: 0;
+        width: 90%;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 2.450rem;
+    }
+
+}
+
+/* large devices */
+@media screen and (min-width:992px) {
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .hero .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* extra large devices */
+@media screen and (min-width:1200px) {
+    .hero .hero-text h1 {
+        font-size: 3rem;
+    }
+}
