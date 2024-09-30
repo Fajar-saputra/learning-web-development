@@ -1,0 +1,60 @@
+// Variable global
+$primary_color: darkred;
+$secondary_color: darkmagenta;
+$size_font: 50px;
+$padding_btn: 0.5rem 2rem;
+
+h1 {
+    color: $primary_color;
+}
+
+h2 {
+    font-size: $size_font;
+}
+
+h3 {
+    display: inline-block;
+    padding: $padding_btn;
+    background-color: $secondary_color;
+}
+
+.lokal {
+    // Variable lokal
+    $size_font: 70px;
+    & h4 {
+        font-size: $size_font;
+    }
+
+    & .lokal2 {
+        font-size: $size_font;
+        // variabel global
+        color: $secondary_color;
+    }
+}
+
+// Map
+$background: (
+    "first": rgb(0, 255, 13),
+    "second": rgb(0, 195, 255),
+    "third": rgb(255, 0, 183),
+);
+
+$btn: (
+    "btn_small": 0.5rem 1rem,
+    "btn_large": 1rem 2rem,
+    "btn_extra": 2rem 3.5rem,
+);
+
+.satu {
+    padding: map-get($map: $btn, $key: btn_small);
+    background-color: map-get($map: $background, $key: third);
+}
+
+.dua {
+    padding: map-get($map: $btn, $key: btn_large);
+    background-color: map-get($map: $background, $key: second);
+}
+.tiga {
+    padding: map-get($map: $btn, $key: btn_extra);
+    background-color: map-get($map: $background, $key: first);
+}

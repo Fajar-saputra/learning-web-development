@@ -1,0 +1,38 @@
+h1 {
+  color: darkred;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  background-color: darkmagenta;
+}
+
+.lokal h4 {
+  font-size: 70px;
+}
+
+.lokal .lokal2 {
+  font-size: 70px;
+  color: darkmagenta;
+}
+
+.satu {
+  padding: 0.5rem 1rem;
+  background-color: #ff00b7;
+}
+
+.dua {
+  padding: 1rem 2rem;
+  background-color: #00c3ff;
+}
+
+.tiga {
+  padding: 2rem 3.5rem;
+  background-color: #00ff0d;
+}
+/*# sourceMappingURL=style.css.map */
