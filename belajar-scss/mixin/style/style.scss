@@ -1,1 +1,100 @@
+// Contoh mixin sederhana tanpa parameter
+@mixin inline-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        padding: 0.5rem 2rem;
+        background-color: darkgoldenrod;
+        transition: linear 0.3s;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        &:hover {
+            background-color: darkcyan;
+        }
+    }
+}
 
+@mixin button-download {
+    margin: 0;
+    padding: 0;
+    padding: 0.5rem 1.7rem;
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-weight: bold;
+    &:hover {
+        background-color: darkorchid;
+        transition: 0.3s ease-in-out;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+// Mixin dengan 1 parameter
+@mixin flex-satu($space: center) {
+    display: flex;
+    justify-content: $space;
+    align-items: center;
+    gap: none;
+}
+// Mixin dengan 2 parameter
+@mixin flex-dua($space: center, $align: center) {
+    display: flex;
+    justify-content: $space;
+    align-items: $align;
+    gap: none;
+}
+// Mixin dengan parameter seterusnya
+@mixin flex-tiga($display: inline, $space: center, $align: center, $gap: none) {
+    display: $display;
+    justify-content: $space;
+    align-items: $align;
+    gap: $gap;
+}
+
+// Panggil menggunakan include
+.header {
+    @include inline-list();
+}
+.footer {
+    margin-top: 1rem;
+    & ul {
+        @include inline-list();
+        & li {
+            padding: 1rem 3rem;
+        }
+    }
+}
+
+.main {
+    background-color: aqua;
+    & button {
+        @include button-download();
+    }
+
+    & .container {
+        width: 600px;
+        height: 400px;
+        background-color: rgb(170, 255, 0);
+
+        // panggil mixin dengan 1 parameter
+        // @include flex-satu(space-between);
+
+        // panggil mixin dengan 2 parameter
+        // @include flex-dua(start, end);
+
+        // panggil mixin dengan lebih paramater
+        @include flex-tiga(flex, center, flex-end, 2rem);
+
+        & .box {
+            width: 150px;
+            height: 150px;
+            background-color: darkorange;
+            text-align: center;
+            line-height: 150px;
+        }
+    }
+}
