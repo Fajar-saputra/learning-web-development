@@ -1,0 +1,15 @@
+// contoh panggil menggunakan @import
+// @import "modules/mixin";
+// @import "modules/header";
+// @import "modules/main";
+// @import "modules/footer";
+
+// contoh lain panggil @import
+@import "modules/mixin", "modules/header", "modules/main", "modules/footer";
+
+// untuk panggil menggunakan @use harus install aplikasi dark sass terlebih dahulu dan di compile lewat terminal atau aplikasi yang diinstall
+// sintaks compile = sass scss/styl.scss css/style.css
+
+// @use "modules/header";
+// @use "modules/main";
+// @use "modules/footer";

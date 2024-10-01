@@ -1,0 +1,29 @@
+.main {
+    background-color: aqua;
+    & button {
+        @include button-download();
+    }
+
+    & .container {
+        width: 600px;
+        height: 400px;
+        background-color: rgb(170, 255, 0);
+
+        // panggil mixin dengan 1 parameter
+        // @include flex-satu(space-between);
+
+        // panggil mixin dengan 2 parameter
+        // @include flex-dua(start, end);
+
+        // panggil mixin dengan lebih paramater
+        @include flex-tiga(flex, center, flex-end, 2rem);
+
+        & .box {
+            width: 150px;
+            height: 150px;
+            background-color: darkorange;
+            text-align: center;
+            line-height: 150px;
+        }
+    }
+}
