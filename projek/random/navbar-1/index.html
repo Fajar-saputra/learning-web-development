@@ -1,26 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Navbar Transisik</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar transition unic</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
 
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-brand">
-                <a href="#">spanciro
-                    <ul class="navbar-nav">
-                        <li><a href="#">HOME</a><a href="#">ABOUT</a><a href="#">SERVICES</a><a href="#">TEAM</a><a
-                                href="#">PORFOLIOS</a></li>
-                    </ul>
-                </a>
-            </div>
-        </nav>
-    </header>
-</body>
+            ul {
+                list-style: none;
+            }
 
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 7%;
+            }
+
+            .navbar .nav-brand a {
+                font-weight: bold;
+                font-size: 2rem;
+            }
+            .navbar .nav-brand a span {
+                color: darkred;
+            }
+
+            .navbar .navbar-nav {
+                display: flex;
+            }
+
+            .navbar .navbar-nav li a {
+                display: block;
+                padding: 0.9rem 1.5rem;
+                color: #262626;
+                font-weight: lighter;
+                font-size: 1.1rem;
+                transition: 0.5s;
+                z-index: 1;
+                position: relative;
+            }
+
+            .navbar .navbar-nav li a::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                border-bottom: 2px solid #262626;
+                border-top: 2px solid #262626;
+                transition: 0.3s;
+                opacity: 0;
+            }
+            .navbar .navbar-nav li a::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #262626;
+                transform: scale(0);
+                transition: 0.3s;
+                opacity: 0;
+            }
+
+            .navbar .navbar-nav li a:hover::after {
+                color: #fff;
+            }
+            .navbar .navbar-nav li a:hover::before {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <a href="#">SPAN<span>CIRO</span> </a>
+                </div>
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="#">HOME</a>
+                    </li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
+                    <li><a href="#">TEAM</a></li>
+                    <li><a href="#">PORTFOLIOS</a></li>
+                    <!-- Perbaikan typo -->
+                </ul>
+            </nav>
+        </header>
+
+        <script>
+            const array = [1, 2, 3, 4, 5];
+
+            array.forEach((element) => console.log(element));
+        </script>
+    </body>
 </html>
