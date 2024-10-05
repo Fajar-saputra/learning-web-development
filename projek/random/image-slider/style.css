@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    width: 75%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem auto;
+}
+
+.container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: .5s ease;
+}
+
+.container img:hover {
+    width: 100%;
+}
