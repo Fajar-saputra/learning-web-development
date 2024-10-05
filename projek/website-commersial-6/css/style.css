@@ -140,3 +140,11 @@ h4 {
     flex-direction: column;
     gap: 1em;
 }
+
+
+/* BREAKPOINT */
+@media screen and (min-width: 992px) {
+    .container {
+        padding: 0 2em;
+    }
+}
