@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 :root {
-    ---primary-color: #ff6b6b;
-    ---secondary-color: #794afa;
-    ---secondary-dark-color: #453c5c;
+    --primary-color: #ff6b6b;
+    --secondary-color: #794afa;
+    --secondary-dark-color: #453c5c;
 
-    ---white-color: #fff;
-    ---light-bg-color: #f2f3f5;
-    ---light-text-color: #7c899a;
-    ---border-color: #e5e8ec;
-    ---dark-color: #0a021c;
+    --white-color: #fff;
+    --light-bg-color: #f2f3f5;
+    --light-text-color: #7c899a;
+    --border-color: #e5e8ec;
+    --dark-color: #0a021c;
 
     /* font size */
     --font-small: 13px;
@@ -45,7 +45,8 @@ body {
     font-weight: 400;
     line-height: 1.4;
     color: var(--dark-color);
-    background-color: var(---white-color);
+    background-color: var(--white-color);
+    /* Perbaikan dari var(---white-color) */
 }
 
 a {
@@ -141,6 +142,79 @@ h4 {
     gap: 1em;
 }
 
+.main-links a:hover {
+    color: var(--secondary-color);
+    /* Perbaikan dari var(---secondary-color) */
+}
+
+.second-links a:hover {
+    color: var(--secondary-color);
+    /* Perbaikan dari var(---secondary-color) */
+}
+
+.icon-small,
+.icon-large {
+    display: flex;
+    align-items: center;
+    padding: 0 .25em;
+    font-weight: normal;
+}
+
+.icon-small {
+    font-size: 1.25em;
+    margin: auto;
+}
+
+.icon-large {
+    font-size: 1.75em;
+    padding: 0 .75em 0 0;
+}
+
+/* HEADER */
+
+header li>a {
+    display: flex;
+    position: relative;
+    line-height: inherit;
+    transition: var(--trans-color);
+}
+
+header .wrapper {
+    font-size: var(--font-small);
+    font-weight: var(--fw3);
+    justify-content: space-between;
+    line-height: 42px;
+}
+
+header .header-top li {
+    position: relative;
+}
+
+header .wrapper ul {
+    gap: 2em;
+}
+
+header .header-top .right ul ul {
+    position: absolute;
+    left: -1em;
+    line-height: 2em;
+    border: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    z-index: 1;
+    display: none;
+}
+
+header .header-top .right ul ul li a {
+    padding: .25em 1em;
+}
+
+header .header-top .right ul ul li.current a {
+    background-color: var(--border-color); /* Pastikan ini memiliki spesifisitas yang cukup */
+}
+
+header .header-top li:hover ul{
+    display: block;
+}
 
 /* BREAKPOINT */
 @media screen and (min-width: 992px) {
