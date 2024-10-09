@@ -6,7 +6,7 @@
     --secondary-dark-color: #453c5c;
 
     --white-color: #fff;
-    --light-bg-color: #f2f3f5;
+    --light-bg-color: #c5c5c5;
     --light-text-color: #7c899a;
     --border-color: #e5e8ec;
     --dark-color: #0a021c;
@@ -46,7 +46,6 @@ body {
     line-height: 1.4;
     color: var(--dark-color);
     background-color: var(--white-color);
-    /* Perbaikan dari var(---white-color) */
 }
 
 a {
@@ -144,12 +143,10 @@ h4 {
 
 .main-links a:hover {
     color: var(--secondary-color);
-    /* Perbaikan dari var(---secondary-color) */
 }
 
 .second-links a:hover {
-    color: var(--secondary-color);
-    /* Perbaikan dari var(---secondary-color) */
+    color: var(--light-bg-color);
 }
 
 .icon-small,
@@ -170,6 +167,10 @@ h4 {
     padding: 0 .75em 0 0;
 }
 
+.mobile-hide {
+    display: none;
+}
+
 /* HEADER */
 
 header li>a {
@@ -179,18 +180,18 @@ header li>a {
     transition: var(--trans-color);
 }
 
-header .wrapper {
+.header-top .wrapper {
     font-size: var(--font-small);
     font-weight: var(--fw3);
     justify-content: space-between;
     line-height: 42px;
 }
 
-header .header-top li {
+.header-top li {
     position: relative;
 }
 
-header .wrapper ul {
+.header-top .wrapper ul {
     gap: 2em;
 }
 
@@ -209,16 +210,103 @@ header .header-top .right ul ul li a {
 }
 
 header .header-top .right ul ul li.current a {
-    background-color: var(--border-color); /* Pastikan ini memiliki spesifisitas yang cukup */
+    background-color: var(--border-color);
+    /* Pastikan ini memiliki spesifisitas yang cukup */
 }
 
-header .header-top li:hover ul{
+header .header-top li:hover ul {
     display: block;
+}
+
+/* header-top */
+.trigger {
+    font-size: 1.5em;
+    display: flex;
+    padding: .25em;
+    margin-right: .5em;
+}
+
+.logo a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75em;
+    position: relative;
+    font-weight: var(--fw8);
+    display: flex;
+    padding: .75em;
+    margin-right: 2em;
+}
+
+.circle {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    z-index: 1;
+}
+
+/* .circle::before{
+    content: '';
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    opacity: .7;
+} */
+
+.header-nav nav>ul {
+    gap: 2em;
+    line-height: 100px;
+}
+
+.fly-item {
+    position: absolute;
+    font-size: var(--font-extra-small);
+    padding: 3px;
+    color: var(--white-color);
+    line-height: 15px;
+}
+
+nav .fly-item {
+    top: 25%;
+    right: -32px;
+    border-radius: 3px;
+    background-color: var(--primary-color);
+}
+
+.header-nav .right {
+    position: relative;
+    margin-left: auto;
+}
+
+.header-nav .right .icon-large {
+    position: relative;
+}
+
+.header-nav .right .fly-item {
+    top: 0;
+    right: 15px;
+    width: 13px;
+    background-color: var(--secondary-dark-color);
+    border-radius: var(--percent50);
 }
 
 /* BREAKPOINT */
 @media screen and (min-width: 992px) {
     .container {
         padding: 0 2em;
+    }
+
+    .desktop-hide {
+        display: none;
+    }
+
+    .mobile-hide {
+        display: block;
     }
 }
