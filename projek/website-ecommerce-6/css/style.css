@@ -171,6 +171,72 @@ h4 {
     display: none;
 }
 
+.objec-cover img {
+    position: absolute;
+    object-fit: cover;
+    width: var(--percent100);
+    height: var(--percent100);
+    display: block;
+}
+
+.products .media {
+    position: relative;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.primary-button,
+.secondary-button,
+.light-button {
+    font-size: var(--font-small);
+    padding: .9em 2em;
+    border-radius: 2em;
+    height: auto;
+    width: fit-content;
+    transition: var(--trans-background-color);
+}
+
+.primary-button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.primary-button:hover {
+    background-color: var(--dark-color);
+}
+
+.secondary-button {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.secondary-button:hover {
+    background-color: var(--light-bg-color);
+    color: var(--secondary-color);
+}
+
+.light-button {
+    background-color: var(--light-bg-color);
+}
+
+.light-button:hover {
+    background-color: var(--secondary-dark-color);
+    color: var(--white-color);
+}
+
+.view-all {
+    font-size: var(--font-small);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    transition: var(--trans-color);
+}
+
+
+
+
+
+
 /* HEADER */
 
 header li>a {
@@ -219,6 +285,12 @@ header .header-top li:hover ul {
 }
 
 /* header-top */
+.header-nav {
+    padding: .5em 0;
+    margin-bottom: .5em;
+    border-bottom: 1px solid var(--border-color);
+}
+
 .trigger {
     font-size: 1.5em;
     display: flex;
@@ -291,9 +363,16 @@ nav .fly-item {
 .header-nav .right .fly-item {
     top: 0;
     right: 15px;
-    width: 13px;
     background-color: var(--secondary-dark-color);
     border-radius: var(--percent50);
+}
+
+.mega .flexcol {
+    flex: 1;
+    min-width: 180px;
+    padding-right: 2.5em;
+    margin-bottom: 1.5em;
+    z-index: 1;
 }
 
 /* BREAKPOINT */
@@ -308,5 +387,92 @@ nav .fly-item {
 
     .mobile-hide {
         display: block;
+    }
+
+    .header-nav {
+        margin: 0;
+        padding: 0;
+        border-bottom: 0;
+    }
+
+    .header-nav .right li>a {
+        margin-left: 1em;
+    }
+
+    /* Mega Menu */
+    nav .mega {
+        position: absolute;
+        width: var(--percent100);
+        top: auto;
+        left: 0;
+        right: 0;
+        padding: 2em;
+        line-height: 2em;
+        background-color: var(--border-color);
+        z-index: 100;
+
+        display: none;
+    }
+
+    nav li.has-child:hover .mega {
+        display: block;
+    }
+
+    nav .mega .wrapper {
+        display: flex;
+    }
+
+    nav .mega h4 {
+        font-size: .8em;
+        text-transform: uppercase;
+    }
+
+    nav .mega ul {
+        font-size: var(--font-small);
+    }
+
+    nav .mega .women-brands {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 180px;
+    }
+
+    nav .mega .women-brands li {
+        min-width: 80px;
+    }
+
+    nav .mega .view-all {
+        margin-top: 1em;
+    }
+
+    nav .mega .products {
+        flex: 2;
+        padding: 0;
+        align-items: center;
+        position: relative;
+    }
+
+    nav .mega .products .row {
+        width: var(--percent100);
+    }
+
+    nav .mega .products .media {
+        height: 400px;
+    }
+
+    nav .mega .products .text-content {
+        line-height: initial;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 4em;
+        width: var(--percent100);
+    }
+
+    nav .mega .products .text-content h4 {
+        font-weight: var(--fw8);
+        font-size: 2em;
+        color: var(--secondary-dark-color);
     }
 }
