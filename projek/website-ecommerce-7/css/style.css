@@ -133,3 +133,123 @@ main {
     box-shadow: 3px 3px 5px var(--text-color);
     background-color: var(--main-color);
 }
+
+/* cart */
+.cart { 
+    position: fixed;
+    top: 0;
+    /* right: -100%; untuk toggle */
+    right: 0;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--bg-color);
+    box-shadow: -0.0625rem 0px 0.3125rem 0.03125rem var(--text-color);
+    transition: 0.3s cubic-bezier(0.68, 0.01, 0.58, 1);
+}
+
+.cart.active{
+    right: 0;
+}
+
+.cart-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail-box {
+    display: grid;
+    row-gap: .5rem;
+}
+
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-weight: 500;
+}
+
+.cart-quantity {
+    border: 1px solid var(--text-color);
+    outline-color: var(--main-color);
+    width: 30%;
+    padding: 2px 4px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+#cart-remove {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#cart-remove:hover {
+    color: var(--main-color);
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    margin-top: 1.5rem;
+    padding-top: .5rem;
+    border-top: 1px solid var(--text-color);
+}
+
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .9rem 1.5rem;
+    border: none;
+    background-color: var(--main-color);
+    cursor: pointer;
+    transition: .3s all;
+}
+
+.btn-buy:hover {
+    background-color: #ff0000;
+}
+
+#cart-close{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: .3s all;
+}
+
+#cart-close:hover{
+    background-color: var(--main-color);
+}
