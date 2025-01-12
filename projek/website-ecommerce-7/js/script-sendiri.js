@@ -39,6 +39,18 @@ function ready() {
     addCart.forEach((button) => {
         button.addEventListener("click", addCartClicked);
     });
+
+    // buy button working
+    document.querySelector(".btn-buy").addEventListener("click", buyButtonClicked);
+}
+
+function buyButtonClicked() {
+    alert("Your order is placed");
+    let cartContent = document.querySelector(".cart-content");
+    while (cartContent.hasChildNodes()) {
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updateTotal();
 }
 
 // Fungsi quantityChanged() untuk memperbarui jumlah
@@ -55,12 +67,17 @@ function quantityChanged(event) {
 function addCartClicked(event) {
     let button = event.target;
     let shopProducts = button.parentElement;
-    let title = shopProducts.querySelector(".product-title");
-    let price = shopProducts.querySelector(".price");
+
+    // Mengambil teks dari elemen
+    let title = shopProducts.querySelector(".product-title").innerText;
+    let price = shopProducts.querySelector(".price").innerText;
     let productImg = shopProducts.querySelector(".product-img").src;
+
+    // Panggil fungsi untuk menambahkan produk ke keranjang
     addProductToCart(title, price, productImg);
 
-    console.log(title, price, productImg);
+    // Debugging: Pastikan data yang benar dicetak ke konsol
+    console.log("Title:", title, "Price:", price, "Image Source:", productImg);
 }
 
 // bermasalah
@@ -70,28 +87,36 @@ function addProductToCart(title, price, productImg) {
     let cartItems = document.querySelector(".cart-content");
     let cartItemsName = document.querySelectorAll(".cart-product-title");
 
+    // Cek apakah produk sudah ada di keranjang
     for (let index = 0; index < cartItemsName.length; index++) {
-        if (cartItemsName[index].innerText == title) {
-            alert("you have already add this item to cart");
+        if (cartItemsName[index].innerText === title) {
+            alert("You have already added this item to the cart");
             return;
         }
     }
 
-    console.log("tess");
+    console.log("Adding product to cart");
 
-    let cartBoxContent = ` <img src="${productImg}" alt="cart-img">
-                        <div class="detail-box">
-                            <div class="cart-product-title">${title}</div>
-                            <div class="cart-price">${price}</div>
-                            <input type="number" value="1" class="cart-quantity">
-                        </div>
-                        <!-- remove -->
-                        <i class='bx bxs-trash-alt' id="cart-remove"></i>`;
+    // Konten HTML untuk produk di keranjang
+    let cartBoxContent = `
+        <img src="${productImg}" alt="cart-img">
+        <div class="detail-box">
+            <div class="cart-product-title">${title}</div>
+            <div class="cart-price">${price}</div>
+            <input type="number" value="1" class="cart-quantity">
+        </div>
+        <i class="bx bxs-trash-alt cart-remove"></i>`;
 
     cartShopBox.innerHTML = cartBoxContent;
+
+    // Tambahkan elemen produk ke dalam keranjang
     cartItems.append(cartShopBox);
-    cartShopBox.getElementsByClassName("cart-remove").addEventListener("click", removeCartItem);
-    cartShopBox.getElementsByClassName("cart-quantity").addEventListener("change", quantityChanged);
+
+    // Tambahkan event listener ke tombol hapus
+    cartShopBox.querySelector(".cart-remove").addEventListener("click", removeCartItem);
+
+    // Tambahkan event listener ke input kuantitas
+    cartShopBox.querySelector(".cart-quantity").addEventListener("change", quantityChanged);
 }
 
 // Fungsi removeCartItem() untuk menghapus item
@@ -99,6 +124,7 @@ function removeCartItem(event) {
     let buttonClicked = event.target;
     buttonClicked.parentElement.remove();
 
+    console.log("tess hapus");
     updateTotal();
 }
 
