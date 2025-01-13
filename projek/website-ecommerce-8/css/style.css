@@ -253,3 +253,25 @@ nav .logo span {
     opacity: 1;
     transform: translateX(0) scaleX(1);
 }
+
+/* shop */
+.shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.shop-container .box{
+    padding: 1rem;
+    border-radius: .3rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.shop-container .box img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    border-radius: .3rem;
+    object-position: center;
+    background-color: var(--container-color);
+}
