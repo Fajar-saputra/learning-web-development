@@ -170,8 +170,10 @@ nav .logo span {
     transition: background-color, .2s ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,
+.shop-container .box .bx:hover {
     background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color);
 }
 
 .section-title {
@@ -197,13 +199,19 @@ nav .logo span {
     color: var(--main-color);
 }
 
-.featured-container {
+.grid-container-1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(17rem, auto));
     gap: 1.5rem;
 }
 
-.featured-container .box {
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.featured .box {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -213,30 +221,30 @@ nav .logo span {
     background-color: var(--container-color);
 }
 
-.featured-container .box img {
+.featured .box img {
     width: 11rem;
     object-fit: cover;
     object-position: center;
     transition: .3s ease-in-out, transform;
 }
 
-.featured-container .box img:hover {
+.featured .box img:hover {
     transform: scale(1.1);
 }
 
-.featured-container .box h2 {
+.featured .box h2 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
-.featured-container .box a {
+.featured .box a {
     border-radius: .3rem;
     cursor: pointer;
     position: relative;
 }
 
-.featured-container .box a::before {
+.featured .box a::before {
     content: '';
     width: 100%;
     height: .3rem;
@@ -249,29 +257,53 @@ nav .logo span {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 }
 
-.featured-container .box a:hover::before {
+.featured .box a:hover::before {
     opacity: 1;
     transform: translateX(0) scaleX(1);
 }
 
 /* shop */
-.shop-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px, 1fr));
-    gap: 2rem;
-}
 
-.shop-container .box{
+
+.shop .box {
     padding: 1rem;
     border-radius: .3rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.shop-container .box img {
+.shop .box img {
     width: 100%;
     height: 280px;
     object-fit: contain;
     border-radius: .3rem;
     object-position: center;
     background-color: var(--container-color);
+}
+
+.shop .box h2 {
+    font-size: 1.2rem;
+    margin: 1rem 0 .5rem;
+    font-weight: 500;
+}
+
+.shop .box .price {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: .6rem 1.5rem;
+    border-radius: .3rem;
+    background-color: var(--main-light);
+}
+
+.shop .box .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop .box .bx {
+    padding: .8rem;
+    border-radius: .3rem;
+    background-color: var(--main-light);
+    font-size: 1.2rem;
+    transition: .3s ease-in-out;
 }
