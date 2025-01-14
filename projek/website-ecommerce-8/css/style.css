@@ -211,7 +211,7 @@ nav .logo span {
     gap: 2rem;
 }
 
-.featured .box {
+.featured .grid-item-1 {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -221,30 +221,30 @@ nav .logo span {
     background-color: var(--container-color);
 }
 
-.featured .box img {
+.featured .grid-item-1 img {
     width: 11rem;
     object-fit: cover;
     object-position: center;
     transition: .3s ease-in-out, transform;
 }
 
-.featured .box img:hover {
+.featured .grid-item-1 img:hover {
     transform: scale(1.1);
 }
 
-.featured .box h2 {
+.featured .grid-item-1 h2 {
     font-size: 1.2rem;
     margin-bottom: 2rem;
     font-weight: 600;
 }
 
-.featured .box a {
+.featured .grid-item-1 a {
     border-radius: .3rem;
     cursor: pointer;
     position: relative;
 }
 
-.featured .box a::before {
+.featured .grid-item-1 a::before {
     content: '';
     width: 100%;
     height: .3rem;
@@ -257,7 +257,7 @@ nav .logo span {
     transition: transform .3s ease-in-out, opacity .3s ease-in-out;
 }
 
-.featured .box a:hover::before {
+.featured .grid-item-1 a:hover::before {
     opacity: 1;
     transform: translateX(0) scaleX(1);
 }
@@ -265,13 +265,13 @@ nav .logo span {
 /* shop */
 
 
-.shop .box {
+.grid-item-2 {
     padding: 1rem;
     border-radius: .3rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.shop .box img {
+.grid-item-2 img {
     width: 100%;
     height: 280px;
     object-fit: contain;
@@ -280,13 +280,13 @@ nav .logo span {
     background-color: var(--container-color);
 }
 
-.shop .box h2 {
+.grid-item-2 h2 {
     font-size: 1.2rem;
     margin: 1rem 0 .5rem;
     font-weight: 500;
 }
 
-.shop .box .price {
+.grid-item-2 .price{
     font-size: 1rem;
     font-weight: 600;
     padding: .6rem 1.5rem;
@@ -294,16 +294,38 @@ nav .logo span {
     background-color: var(--main-light);
 }
 
-.shop .box .detail {
+.grid-item-2 .detail {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.shop .box .bx {
+.grid-item-2 .bx {
     padding: .8rem;
     border-radius: .3rem;
     background-color: var(--main-light);
     font-size: 1.2rem;
     transition: .3s ease-in-out;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.nav-link {
+    border-radius: .2rem;
+    color: var(--text-color);
+    transition: background-color 0.3s, transform .3s ease-in-out;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-icons .user-icon,
+.nav-icons .cart-icon {
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: .5rem;
 }

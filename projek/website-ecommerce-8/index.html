@@ -17,22 +17,22 @@
 
 <body>
     <header>
-        <nav class="container">
+        <nav class="navbar-container">
             <!-- logo -->
             <a href="#" class="logo">
                 fajar<span>store</span>
             </a>
             <!-- nav links -->
             <ul class="navbar">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#featured">Featured</a></li>
-                <li><a href="#shop">Shop</a></li>
-                <li><a href="#new">New</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#featured" class="nav-link">Featured</a></li>
+                <li><a href="#shop" class="nav-link">Shop</a></li>
+                <li><a href="#new" class="nav-link">New</a></li>
             </ul>
             <!-- icon -->
             <div class="nav-icons">
-                <a href="#" class="user"><i class='bx bx-user'></i></a>
-                <a href="#" class="cart"><i class='bx bx-cart'><span>0</span></i></a>
+                <a href="#" class="user-icon"><i class='bx bx-user'></i></a>
+                <a href="#" class="cart-icon"><i class='bx bx-cart'><span>0</span></i></a>
                 <!-- menu -->
                 <i class='bx bx-menu' id="menu"></i>
             </div>
@@ -64,7 +64,7 @@
 
             <!-- box -->
             <div class="grid-container-1">
-                <div class="box">
+                <div class="grid-item-1">
                     <figure>
                         <img src="image/featured1.png" alt="New Collection of Shoes" />
                         <figcaption>Koleksi Baru Sepatu</figcaption>
@@ -74,7 +74,7 @@
                         <a href="#">View more</a>
                     </div>
                 </div>
-                <div class="box">
+                <div class="grid-item-1">
                     <figure>
                         <img src="image/featured2.png" alt="20% Discount on Shoes" />
                         <figcaption>Diskon 20% untuk Sepatu</figcaption>
@@ -88,69 +88,11 @@
         </section>
         <!-- End Featured -->
         <!-- shop -->
-         <section class="shop container" id="shop">
-            <h2 class="section-title">Shop <span>Now</span></h2>
-
-            <div class="grid-container-2">
-                <div class="box">
-                    <img src="image/shop1.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="image/shop2.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="image/shop3.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="image/shop4.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="image/shop5.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="image/shop6.png" alt="">
-                    <h2>Nike Therma</h2>
-                    <div class="detail">
-                        <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
-                    </div>
-                </div>
-            </div>
-
-         </section>
-        <!-- end  -->
-
-        <!-- New container -->
         <section class="shop container" id="shop">
             <h2 class="section-title">Shop <span>Now</span></h2>
 
             <div class="grid-container-2">
-                <div class="box">
+                <div class="grid-item-2">
                     <img src="image/shop1.png" alt="">
                     <h2>Nike Therma</h2>
                     <div class="detail">
@@ -158,26 +100,95 @@
                         <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
                     </div>
                 </div>
-                <div class="box">
+                <div class="grid-item-2">
                     <img src="image/shop2.png" alt="">
                     <h2>Nike Therma</h2>
                     <div class="detail">
                         <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
                     </div>
                 </div>
-                <div class="box">
+                <div class="grid-item-2">
                     <img src="image/shop3.png" alt="">
                     <h2>Nike Therma</h2>
                     <div class="detail">
                         <p class="price">ID 300.000</p>
-                    <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <img src="image/shop4.png" alt="">
+                    <h2>Nike Therma</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <img src="image/shop5.png" alt="">
+                    <h2>Nike Therma</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <img src="image/shop6.png" alt="">
+                    <h2>Nike Therma</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
                     </div>
                 </div>
             </div>
 
-         </section>
+        </section>
+        <!-- end  -->
+
+        <!-- New container -->
+        <section class="new container" id="new">
+            <h2 class="section-title">Shop <span>Now</span></h2>
+
+            <div class="grid-container-2">
+                <div class="grid-item-2">
+                    <img src="image/new1.png" alt="">
+                    <h2>Nike Shoes</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <img src="image/new2.png" alt="">
+                    <h2>Nike bagpack</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+                <div class="grid-item-2">
+                    <img src="image/new3.png" alt="">
+                    <h2>Nike Hot</h2>
+                    <div class="detail">
+                        <p class="price">ID 300.000</p>
+                        <a href="#$"><i class='bx bx-cart-alt' id="cart-item"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- End New container -->
+        <!-- Newsletter -->
+         <div class="newsletter container">
+            <div class="heading">
+                <h2 class="section-title">Subscribe <span>Newsletter</span></h2>
+            </div>
+            <form action="">
+                <input type="email" placeholder="enter your email" name="" id="" class="email-user">
+                <input type="submit" value="Subscribe" class="btn-form">
+            </form>
+         </div>
+        <!-- End Newsletter -->
+
     </main>
 
     <!-- Script -->
