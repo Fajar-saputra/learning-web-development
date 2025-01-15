@@ -32,7 +32,26 @@
             <!-- icon -->
             <div class="nav-icons">
                 <a href="#" class="user-icon"><i class='bx bx-user'></i></a>
-                <a href="#" class="cart-icon"><i class='bx bx-cart'><span>0</span></i></a>
+
+
+
+                <i class='bx bx-cart' id="cart-icon"></i>
+                <!-- cart -->
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <div class="cart-content">
+                    </div>
+
+                    <!-- total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price"> ID 0</div>
+                    </div>
+                    <!-- buy button -->
+                    <button type="button" class="btn-primary">Buy Now!</button>
+                    <!-- cart close -->
+                    <i class='bx bx-x' id="cart-close"></i>
+                </div>
                 <!-- menu -->
                 <i class='bx bx-menu' id="menu"></i>
             </div>
@@ -63,10 +82,8 @@
         <section class="featured" id="featured" aria-label="Featured Items">
             <div class="container">
                 <h2 class="section-title">Featured <span>Items</span></h2>
-
-                <!-- box -->
-                <div class="grid-container-1">
-                    <div class="grid-item-1">
+                <div class="grid-container">
+                    <div class="grid-item">
                         <figure>
                             <img src="image/featured1.png" alt="New Collection of Shoes" />
                         </figure>
@@ -75,7 +92,7 @@
                             <a href="#" target="_blank">View more</a>
                         </div>
                     </div>
-                    <div class="grid-item-1">
+                    <div class="grid-item">
                         <figure>
                             <img src="image/featured2.png" alt="20% Discount on Shoes" />
                         </figure>
@@ -94,54 +111,56 @@
                 <h2 class="section-title">Shop <span>Now</span></h2>
 
                 <div class="grid-container-2">
-                    <div class="grid-item-2">
+
+                    <!-- item 1 -->
+                    <div class="product-box">
                         <img src="image/shop1.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+
+                    <!-- item 2 -->
+                    <div class="product-box">
                         <img src="image/shop2.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 3 -->
+                    <div class="product-box">
                         <img src="image/shop3.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 4 -->
+                    <div class="product-box">
                         <img src="image/shop4.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 5 -->
+                    <div class="product-box">
                         <img src="image/shop5.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 6 -->
+                    <div class="product-box">
                         <img src="image/shop6.png" class="product-img" alt="Nike Therma Image">
-                        <h3 class="item-title">Nike Therma</h3>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -153,41 +172,42 @@
                 <h2 class="section-title">Collection <span>Now</span></h2>
 
                 <div class="grid-container-2">
-                    <div class="grid-item-2">
-                        <img src="image/new1.png" class="product-img" alt="Nike Shoes Image">
-                        <h2 class="item-title">Nike Shoes</h2>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+
+                    <!-- item 1 -->
+                    <div class="product-box">
+                        <img src="image/new1.png" class="product-img" alt="Nike Therma Image">
+                        <h3 class="product-title">Nike Therma</h3>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 2 -->
+                    <div class="product-box">
                         <img src="image/new2.png" class="product-img" alt="Nike Backpack Image">
-                        <h2 class="item-title">Nike Backpack</h2>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h2 class="product-title">Nike Backpack</h2>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
-                    <div class="grid-item-2">
+
+                    <!-- item 3 -->
+                    <div class="product-box">
                         <img src="image/new3.png" class="product-img" alt="Nike Hot Image">
-                        <h2 class="item-title">Nike Hot</h2>
-                        <div class="detail">
-                            <p class="price">ID 300.000</p>
-                            <a href="#"><i class='bx bx-cart-alt cart-item'></i></a>
-                        </div>
+                        <h2 class="product-title">Nike Hot</h2>
+                        <p class="price">ID 300.000</p>
+                        <i class='bx bx-cart-alt add-cart'></i>
                     </div>
+
                 </div>
             </div>
         </section>
         <!-- End New container -->
+
+
         <!-- Newsletter -->
         <section class="newsletter" id="newsletter" aria-label="newsletter">
             <div class="container">
-                <div class="heading">
-                    <h2 class="section-title">Subscribe <span>Newsletter</span></h2>
-                </div>
-                <form action="#" method="post" class="form-newletter">
+                <h2 class="section-title">Subscribe <span>Newsletter</span></h2>
+                <form action="#" method="post" class="grid-container">
                     <div class="form-left">
                         <label for="email">
                             <i class='bx bx-envelope newsletter-icon'></i>
@@ -211,54 +231,54 @@
             </div>
         </section>
         <!-- End Newsletter -->
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-item">
-                        <!-- logo -->
-                        <a href="#" class="logo">
-                            fajar<span>store</span>
-                        </a>
-                        <div class="social-icons">
-                            <a href="#"><i class='bx bxl-facebook social-icon'></i></a>
-                            <a href="#"><i class='bx bxl-twitter social-icon'></i></a>
-                            <a href="#"><i class='bx bxl-youtube social-icon'></i></a>
-                            <a href="#"><i class='bx bxl-tiktok social-icon'></i></a>
-                            <a href="#"><i class='bx bxl-instagram social-icon'></i></a>
-                        </div>
-                    </div>
-                    <div class="footer-item">
-                        <h3>Pages</h3>
-                        <a href="#home">Home</a>
-                        <a href="#featured">Featured</a>
-                        <a href="#shop">Shop</a>
-                        <a href="#new">New</a>
-                    </div>
-                    <div class="footer-item">
-                        <h3>Legal</h3>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Refund Policy</a>
-                        <a href="#">Terms Of Use</a>
-                        <a href="#">Disclamer</a>
-                    </div>
-                    <div class="footer-item">
-                        <h3>Branches</h3>
-                        <p>United States</p>
-                        <p>Japan</p>
-                        <p>Germany</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-item">
+                    <!-- logo -->
+                    <a href="#" class="logo">
+                        fajar<span>store</span>
+                    </a>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-facebook social-icon'></i></a>
+                        <a href="#"><i class='bx bxl-twitter social-icon'></i></a>
+                        <a href="#"><i class='bx bxl-youtube social-icon'></i></a>
+                        <a href="#"><i class='bx bxl-tiktok social-icon'></i></a>
+                        <a href="#"><i class='bx bxl-instagram social-icon'></i></a>
                     </div>
                 </div>
+                <div class="footer-item">
+                    <h3>Pages</h3>
+                    <a href="#home">Home</a>
+                    <a href="#featured">Featured</a>
+                    <a href="#shop">Shop</a>
+                    <a href="#new">New</a>
+                </div>
+                <div class="footer-item">
+                    <h3>Legal</h3>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Terms Of Use</a>
+                    <a href="#">Disclamer</a>
+                </div>
+                <div class="footer-item">
+                    <h3>Branches</h3>
+                    <p>United States</p>
+                    <p>Japan</p>
+                    <p>Germany</p>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 fajarstore. All rights reserved.</p>
-                <a href="#">Privacy Policy</a>
-            </div>
-        </footer>
-        <!-- End Footer -->
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 fajarstore. All rights reserved.</p>
+            <a href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <!-- End Footer -->
 
-
-    </main>
 
     <!-- Script -->
     <script src="js/script.js"></script>
