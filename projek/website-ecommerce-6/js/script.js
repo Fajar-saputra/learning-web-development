@@ -57,14 +57,62 @@ let swiper = new Swiper(".mySwiper", {
     },
 });
 
-const searchButton = document.querySelector(".t-search"),
+// single page
+let productThumb = new Swiper(".small-image", {
+    loop: true,
+    spaceBetween: 10,
+    slidesPerView: 3,
+    freeMode: true,
+    watchSlidesProgress: true,
+    breakpoints: {
+        481: {
+            spaceBetween: 32,
+        },
+    },
+});
+
+let productBig = new Swiper(".big-image", {
+    loop: true,
+    autoHeight: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: productThumb,
+    },
+});
+
+const seacrhButton = document.querySelector(".t-search"),
     tClose = document.querySelector(".search-close"),
     showClass = document.querySelector(".site");
 
-searchButton.addEventListener("click", function () {
-    showClass.classList.toggle('showsearch');
+seacrhButton.addEventListener("click", () => {
+    showClass.classList.toggle("showsearch");
 });
 
-tClose.addEventListener("click", function () {
-    showClass.classList.remove("showsearch");
+tClose.addEventListener("click", () => {
+    showClass.classList.toggle("showsearch");
 });
+
+// show dpt menu
+const dptButton = document.querySelector(".dpt-cat .dpt-trigger"),
+    dptClass = document.querySelector(".site");
+dptButton.addEventListener("click", () => {
+    dptClass.classList.toggle("showdpt");
+});
+
+// stock products bar width percentase
+// ... existing code ...
+function updateStockBars() {
+    const stocks = document.querySelectorAll(".page-single .stock");
+    
+    stocks.forEach(stock => {
+        const available = parseInt(stock.querySelector(".qty-available").innerHTML, 10);
+        const sold = parseInt(stock.querySelector(".qty-sold").innerHTML, 10);
+        const percent = (available * 100) / sold;
+
+        stock.querySelector(".available").style.width = percent + "%";
+    });
+}
+updateStockBars();
