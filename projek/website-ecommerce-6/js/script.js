@@ -103,16 +103,36 @@ dptButton.addEventListener("click", () => {
 });
 
 // stock products bar width percentase
-// ... existing code ...
-function updateStockBars() {
-    const stocks = document.querySelectorAll(".page-single .stock");
+// function lama
+// function updateStockBars() {
+//     const stocks = document.querySelectorAll(".page-single .stock");
     
+//     stocks.forEach(stock => {
+//         const available = parseInt(stock.querySelector(".qty-available").innerHTML, 10);
+//         const sold = parseInt(stock.querySelector(".qty-sold").innerHTML, 10);
+//         const percent = (available * 100) / sold;
+
+//         stock.querySelector(".available").style.width = percent + "%";
+//     });
+// }
+
+
+// function yang sudah dioptimasi
+function updateStockBars() {
+    const stocks = document.querySelectorAll(".stock");
+
     stocks.forEach(stock => {
         const available = parseInt(stock.querySelector(".qty-available").innerHTML, 10);
         const sold = parseInt(stock.querySelector(".qty-sold").innerHTML, 10);
-        const percent = (available * 100) / sold;
+        const total = available + sold; // Total stok
 
+        // Hitung persentase stok yang tersedia
+        const percent = (available / total) * 100;
+
+        // Terapkan lebar ke elemen progress bar
         stock.querySelector(".available").style.width = percent + "%";
     });
 }
+
+// Panggil fungsi
 updateStockBars();

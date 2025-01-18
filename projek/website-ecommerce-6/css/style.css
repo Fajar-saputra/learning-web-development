@@ -718,11 +718,15 @@ form.search button:hover {
     position: relative;
     width: 34px;
     height: 34px;
-    padding: .5em;      
+    padding: .5em;
     line-height: initial;
     background-color: var(--light-bg-color);
     color: var(--secondary-dark-color);
     border-radius: 7px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .products .offer ul li:not(:last-child)::before {
@@ -1203,7 +1207,7 @@ form.search button:hover {
     display: none;
 }
 
-.showdpt .dpt-trigger .bx-x-circle{
+.showdpt .dpt-trigger .bx-x-circle {
     display: block;
 }
 
@@ -1601,7 +1605,7 @@ form p {
     margin-bottom: 2em;
 }
 
-form :where(input , textarea){
+form :where(input, textarea) {
     line-height: 1;
     padding: 1em;
     border: 1px solid var(--border-color);
@@ -1623,7 +1627,7 @@ form label {
     color: initial;
 }
 
-.page-single .stock .bar {
+.single-product .stock .bar {
     height: 10px;
 }
 
@@ -1633,8 +1637,28 @@ form label {
     background-color: var(--secondary-dark-color);
 }
 
-.page-single .offer ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.related-products .content {
+    height: var(--percent100);
+
+}
+
+.related-products .offer {
+    margin: 0;
+}
+
+.related-products .offer p {
+    margin: 0 1rem 0 0;
+    text-transform: none;
+    line-height: 1;
+}
+
+.related-products .offer ul li {
+    width: 28px;
+    height: 28px;
+    font-size: var(--font-small);
+    padding: .5em 0.25em;
+}
+
+.related-products .content .stock {
+    margin-top: auto;
 }
