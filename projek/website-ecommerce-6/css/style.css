@@ -1895,7 +1895,7 @@ input[type="range"]::-webkit-slider-thumb {
     
 }
 
-.mini-cart .products img {
+:is(.mini-cart, .products.cart) .products img {
     transform: none;
 }
 
@@ -1926,7 +1926,7 @@ input[type="range"]::-webkit-slider-thumb {
     overflow: auto;
 }
 
-.mini-cart .thumbnail {
+:where(.mini-cart, .products.cart) .thumbnail {
     position: relative;
     width: 80px;
     height: 80px;
@@ -1990,4 +1990,84 @@ input[type="range"]::-webkit-slider-thumb {
     bottom: 0;
     max-width:400px ;
     width: 90%;
+}
+
+/* PAGE CART */
+.products.cart form{
+    width: var(--percent100);
+}
+
+.products.cart table thead th {
+    vertical-align: middle;
+    background-color: var(--border-color);
+}
+
+.products.cart table :where(th, td){
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.products.cart table :where(th, td):first-child{
+    text-align: left;
+    padding-left: 2em;
+}
+
+.products.cart table tbody td:first-child {
+    padding-left: 0;
+}
+
+.products.cart table td :where(.content, .qty-control, p){
+    margin: 0;
+    padding: 0;
+}
+
+.products.cart .qty-control :where(button, input){
+    width: 32px;
+    height: 32px;
+    padding: .25em;
+    text-align: center;
+    outline: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.products.cart table tbody tr{
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-summary{
+    width: var(--percent100);
+    margin: 2.5em 0 4em;
+}
+
+.cart-summary .item {
+    background-color: var(--border-color);
+}
+
+.cart-summary .coupon {
+    position: relative;
+}
+
+.cart-summary .coupon input {
+    font-size: 1.1em;
+outline: 0;
+width: var(--percent100);
+padding:0 1.5em;
+line-height: 50px;
+background-color: var(--white-color);
+border: 3px solid var(--dark-color);
+}
+
+.cart-summary .coupon button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0;
+    outline: 0;
+    font-size: 1em;
+    padding: 0 2.5em;
+    line-height: 56px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    cursor: pointer;
 }

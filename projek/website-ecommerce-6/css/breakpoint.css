@@ -38,7 +38,8 @@
         width: 50%;
     }
 
-    .products.one .is_sticky, .is_sticky {
+    .products.one .is_sticky,
+    .is_sticky {
         position: sticky;
         top: 2em;
     }
@@ -263,7 +264,7 @@
         display: block;
     }
 
-    .products.one .flexwrap > .row:last-child > .item {
+    .products.one .flexwrap>.row:last-child>.item {
         padding-left: 2em;
     }
 
@@ -295,4 +296,14 @@
         flex: 0 0 33.3333%;
     }
 
+    /* PAGE CART */
+    .products.cart .form-cart{
+        width: 66%;
+    }
+
+    .products.cart .cart-summary {
+        width: 34%;
+        padding-left: 2.5em;
+        margin-top: 0;
+    }
 }
