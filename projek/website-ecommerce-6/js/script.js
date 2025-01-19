@@ -106,7 +106,7 @@ dptButton.addEventListener("click", () => {
 // function lama
 // function updateStockBars() {
 //     const stocks = document.querySelectorAll(".page-single .stock");
-    
+
 //     stocks.forEach(stock => {
 //         const available = parseInt(stock.querySelector(".qty-available").innerHTML, 10);
 //         const sold = parseInt(stock.querySelector(".qty-sold").innerHTML, 10);
@@ -116,12 +116,11 @@ dptButton.addEventListener("click", () => {
 //     });
 // }
 
-
 // function yang sudah dioptimasi
 function updateStockBars() {
     const stocks = document.querySelectorAll(".stock");
 
-    stocks.forEach(stock => {
+    stocks.forEach((stock) => {
         const available = parseInt(stock.querySelector(".qty-available").innerHTML, 10);
         const sold = parseInt(stock.querySelector(".qty-sold").innerHTML, 10);
         const total = available + sold; // Total stok
@@ -136,3 +135,25 @@ function updateStockBars() {
 
 // Panggil fungsi
 updateStockBars();
+
+// filter pada page page category
+// open
+const FtoShow = ".filter";
+const Fpopup = document.querySelector(FtoShow);
+const Ftrigger = document.querySelector(".filter-trigger");
+
+Ftrigger.addEventListener("click", () => {
+    setTimeout(() => {
+        if (!Fpopup.classList.contains("show")) {
+            Fpopup.classList.add("show");
+        }
+    }, 250);
+});
+
+// auto close by click outside .filter
+document.addEventListener("click", (e) => {
+    const IsClose = e.target.closest(FtoShow);
+    if (!IsClose && Fpopup.classList.contains("show")) {
+        Fpopup.classList.remove("show");
+    }
+});

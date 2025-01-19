@@ -266,4 +266,33 @@
     .products.one .flexwrap > .row:last-child > .item {
         padding-left: 2em;
     }
+
+    /* PAGE CATEGORY */
+    .single-category .holder {
+        flex-direction: row;
+    }
+
+    .single-category .sidebar {
+        flex: 1 0 25%;
+    }
+
+    .single-category .section {
+        flex: 1 0 75%;
+    }
+
+    .single-category .sidebar .filter {
+        position: sticky;
+        top: 2em;
+        padding: 0 .1.5em 0;
+        position: relative;
+        box-shadow: none;
+        z-index: initial;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .single-category .products.main .item {
+        flex: 0 0 33.3333%;
+    }
+
 }
