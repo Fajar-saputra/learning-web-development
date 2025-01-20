@@ -536,226 +536,153 @@
         <!-- Main -->
         <main>
 
-            <div class="single-cart">
+            <div class="single-checkout">
                 <div class="container">
                     <div class="wrapper">
-                        <div class="breadcrumb">
-                            <div class="flexitem">
-                                <li><a href="#">Home</a></li>
-                                <li>Cart</li>
-                            </div>
-                        </div>
-                        <div class="page-title">
-                            <h1>Shopping cart</h1>
-                        </div>
-                        <div class="products one cart">
-                            <div class="flexwrap">
-                                <form action="" class="form-cart">
-                                    <div class="item">
-                                        <table id="cart-table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Item</th>
-                                                    <th>Price</th>
-                                                    <th>Qty</th>
-                                                    <th>Subtotal</th>
-                                                    <th></th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover>
-                                                            <a href=" #"><img src="/images/assets/products/home1.jpg"
-                                                                alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Ceiling Light
-                                                                    Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="2" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td><a href="#" class="item-remove"><i
-                                                                class="ri-close-line"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover>
-                                                            <a href=" #"><img src="/images/assets/products/home1.jpg"
-                                                                alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Ceiling Light
-                                                                    Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="2" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td><a href="#" class="item-remove"><i
-                                                                class="ri-close-line"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover>
-                                                            <a href=" #"><img src="/images/assets/products/home1.jpg"
-                                                                alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Ceiling Light
-                                                                    Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="2" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td><a href="#" class="item-remove"><i
-                                                                class="ri-close-line"></i></a></td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="flexitem">
-                                                        <div class="thumbnail object-cover>
-                                                            <a href=" #"><img src="/images/assets/products/home1.jpg"
-                                                                alt=""></a>
-                                                        </div>
-                                                        <div class="content">
-                                                            <strong><a href="#">Dimmable Ceiling Light
-                                                                    Modern</a></strong>
-                                                            <p>Color : Gold</p>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td>
-                                                        <div class="qty-control flexitem">
-                                                            <button class="minus">-</button>
-                                                            <input type="text" value="2" min="1">
-                                                            <button class="plus">+</button>
-                                                        </div>
-                                                    </td>
-                                                    <td>IDR 200.000</td>
-                                                    <td><a href="#" class="item-remove">
-                                                            <i class="ri-close-line"></i>
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                        <div class="checkout flexwrap">
+                            <div class="item left sytled">
+                                <h1>Shipping Address</h1>
+                                <form action="">
+                                    <p>
+                                        <label for="email">Email Address<span></span></label>
+                                        <input type="email" name="email" id="email" required autocomplete="off">
+                                    </p>
+                                    <p>
+                                        <label for="fname">First Name<span></span></label>
+                                        <input type="text" name="fname" id="fname" required>
+                                    </p>
+                                    <p>
+                                        <label for="lname">Last Name<span></span></label>
+                                        <input type="text" name="lname" id="lname">
+                                    </p>
+                                    <p>
+                                        <label for="cname">Company Name</label>
+                                        <input type="text" name="cname" id="cname">
+                                    </p>
+                                    <p>
+                                        <label for="address">Street Address<span></span></label>
+                                        <input type="text" name="address" id="address" required>
+                                    </p>
+                                    <p>
+                                        <label for="city">City<span></span></label>
+                                        <input type="text" name="city" id="city" required>
+                                    </p>
+                                    <p>
+                                        <label for="state">State / Province<span></span></label>
+                                        <input type="text" name="state" id="state" required>
+                                    </p>
+                                    <p>
+                                        <label for="postal">Zip / Postal code<span></span></label>
+                                        <input type="number" name="postal" id="postal" required>
+                                    </p>
+                                    <p>
+                                        <label for="island">Island</label>
+                                        <select name="island" id="island">
+                                            <option value=""></option>
+                                            <option value="1" selected="selected">Sumatera</option>
+                                            <option value="2">Jawa</option>
+                                            <option value="3">Kalimatan</option>
+                                            <option value="4">Sulawesi</option>
+                                            <option value="5">Papua</option>
+                                        </select>
+                                    </p>
+                                    <p>
+                                        <label for="phone">Phone number<span></span></label>
+                                        <input type="number" name="phone" id="phone" required>
+                                    </p>
+                                    <p>
+                                        <label for="">Order Notes (optional)</label>
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                    </p>
+                                    <p class="checkset">
+                                        <input type="checkbox" name="anaccount" id="anaccount">
+                                        <label for="anaccount">Create an account?</label>
+                                    </p>
                                 </form>
-                                <div class="cart-summary styled">
-                                    <div class="item">
-                                        <div class="coupon">
-                                            <input type="text" placeholder="Enter coupun">
-                                            <button>Apply</button>
-                                        </div>
-                                        <div class="shipping-rate collapse">
-                                            <div class="has-child expand">
-                                                <a href="#" class="icon-small">Estimasi shipping and tax</a>
-                                                <div class="content">
-                                                    <div class="countries">
-                                                        <form action="">
-                                                            <label for="island">Island</label>
-                                                            <select name="island" id="island">
-                                                                <option value=""></option>
-                                                                <option value="1" selected="selected">Sumatera</option>
-                                                                <option value="2">Jawa</option>
-                                                                <option value="3">Kalimatan</option>
-                                                                <option value="4">Sulawesi</option>
-                                                                <option value="5">Papua</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="states">
-                                                        <form action="">
-                                                            <label for="state">Province/State</label>
-                                                            <select name="state" id="country">
-                                                                <option value="">Select a region, state or province
-                                                                </option>
-                                                                <option value="1">Aceh</option>
-                                                                <option value="2">Sumatera Utara</option>
-                                                                <option value="3">Sumatera Barat</option>
-                                                                <option value="4">Jawa Barat</option>
-                                                                <option value="5">Jawa Tengah</option>
-                                                                <option value="6">Jawa Timur</option>
-                                                                <option value="7">Kalimantan Barat</option>
-                                                                <option value="8">Kalimantan Selatan</option>
-                                                                <option value="9">Kalimantan Timur</option>
-                                                                <option value="10">Sulawesi Utara</option>
-                                                                <option value="11">Sulawesi Selatan</option>
-                                                                <option value="12">Papua</option>
-                                                            </select>
-                                                        </form>
-                                                    </div>
-                                                    <div class="postal-code">
-                                                        <form action="">
-                                                            <label for="postal">Zip/Postal Code</label>
-                                                            <input type="number" name="postal" id="postal">
-                                                        </form>
-                                                    </div>
-                                                    <div class="rate-options variant">
-                                                        <form action="">
-                                                            <p>
-                                                                <span>Flat : IDR 25.000</span>
-                                                                <input type="radio" name="rate-options" id="flat">
-                                                                <label for="flat" class="circle"></label>
-                                                            </p>
-                                                            <p>
-                                                                <span>Best : IDR 0.00</span>
-                                                                <input type="radio" name="options" id="best">
-                                                                <label for="best" class="circle"></label>
-                                                            </p>
-                                                        </form>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cart-total">
-                                            <table>
-                                                <tbody>
-                                                    <tr>
-                                                        <th>Subtotal</th>
-                                                        <td>IDR 800.000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Discount</th>
-                                                        <td>-IDR 100.000</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th>Shipping <span class="mini-text">(Flat)</span></th>
-                                                        <td>IDR 25.000</td>
-                                                    </tr>
-                                                    <tr class="grand-total">
-                                                        <th>Total</th>
-                                                        <td><strong>IDR 675.000</strong></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                            <a href="/checkout.html" class="secondary-button">Checkout</a>
-                                        </div>
+                                <div class="shipping-methods">
+                                    <h2>Shipping Methods</h2>
+                                    <p class="checkset">
+                                        <input type="radio" name="" id="" checked>
+                                        <label for="">IDR 100.000 Flat Rate</label>
+                                    </p>
+                                </div>
+                                <div class="primary-checkout">
+                                    <button class="primary-button">Place Order</button>
+                                </div>
+                            </div>
+                            <div class="item right">
+                                <h2>Order Summary</h2>
+                                <div class="summary-order is_sticky">
+                                    <div class="summary-totals">
+                                        <ul>
+                                            <li>
+                                                <span>Subtotal</span>
+                                                <span>IDR 800.000</span>
+                                            </li>
+                                            <li>
+                                                <span>Discont</span>
+                                                <span>-IDR 100.000</span>
+                                            </li>
+                                            <li>
+                                                <span>Shipping : Flat</span>
+                                                <span>IDR 25.000</span>
+                                            </li>
+                                            <li>
+                                                <span>Total</span>
+                                                <span><strong>IDR 725.000</strong></span>
+                                            </li>
+                                        </ul>
                                     </div>
+                                    <ul class="products mini">
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="/images/assets/products/home2.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p>Dimmable Ceiling Light Modern</p>
+                                                <span class="price">
+                                                    <span>IDR 200.000</span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="/images/assets/products/home2.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p>Dimmable Ceiling Light Modern</p>
+                                                <span class="price">
+                                                    <span>IDR 200.000</span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="/images/assets/products/home2.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p>Dimmable Ceiling Light Modern</p>
+                                                <span class="price">
+                                                    <span>IDR 200.000</span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="item">
+                                            <div class="thumbnail object-cover">
+                                                <img src="/images/assets/products/home2.jpg" alt="">
+                                            </div>
+                                            <div class="item-content">
+                                                <p>Dimmable Ceiling Light Modern</p>
+                                                <span class="price">
+                                                    <span>IDR 200.000</span>
+                                                    <span></span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
