@@ -136,69 +136,54 @@ function updateStockBars() {
 // Panggil fungsi
 updateStockBars();
 
-// Show modal on load
+// Show modal on first load or manual refresh
 window.onload = function () {
-    document.querySelector(".site").classList.add("showmodal");
+    if (!localStorage.getItem("modalClosed")) {
+        document.querySelector(".site").classList.add("showmodal");
+    }
 };
 
-// Close modal
+// Close modal and save status to localStorage
 const modalCloseButton = document.querySelector(".modalclose");
 const modalElement = document.querySelector(".site");
 modalCloseButton.addEventListener("click", () => {
     modalElement.classList.remove("showmodal");
+    localStorage.setItem("modalClosed", "true"); // Save close status
 });
 
+// Add a manual reset function for testing/debugging
+function resetModalState() {
+    localStorage.removeItem("modalClosed");
+    console.log("Modal state reset. Refresh the page to see the modal again.");
+}
 
-// filter pada page page category
-// open
+// resetModalState()
+
+// Filter logic
 const FtoShow = ".filter";
 const Fpopup = document.querySelector(FtoShow);
 const Ftrigger = document.querySelector(".filter-trigger");
 
-Ftrigger.addEventListener("click", () => {
+Ftrigger.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevents click event bubbling
     setTimeout(() => {
-        if (Fpopup.classList.contains("show")) {
-            Fpopup.classList.remove("show");
-        } else {
-            Fpopup.classList.add("show");
-        }
+        Fpopup.classList.toggle("show");
     }, 250);
 });
 
-// auto close by click outside .filter
+// Close filter when clicking outside (but not modal)
 document.addEventListener("click", (e) => {
-    const IsClose = e.target.closest(FtoShow);
-    if (!IsClose && Fpopup.classList.contains("show")) {
+    const IsFilterClose = e.target.closest(FtoShow);
+    const IsTriggerClick = e.target.closest(".filter-trigger");
+    if (!IsFilterClose && !IsTriggerClick && Fpopup.classList.contains("show")) {
         Fpopup.classList.remove("show");
     }
 });
 
-// show cart on click (mobile)
-const DivToShow = ".mini-cart";
-const DivPopup = document.querySelector(DivToShow);
-const DivTrigger = document.querySelector(".cart-trigger");
-
-DivTrigger.addEventListener("click", () => {
-    setTimeout(() => {
-        if (!DivPopup.classList.contains("show")) {
-            DivPopup.classList.add("show");
-        }
-    }, 250);
-});
-
-// close cart
+// Ensure modal logic and filter logic do not conflict
 document.addEventListener("click", (e) => {
-    const IsClose = e.target.closest(DivToShow);
-    if (!IsClose && DivPopup.classList.contains("show")) {
-        DivPopup.classList.remove("show");
+    const IsModalClick = e.target.closest(".modal");
+    if (!IsModalClick && modalElement.classList.contains("showmodal")) {
+        modalElement.classList.remove("showmodal");
     }
-});
-
-// show modal on load
-window.onload = function () {
-    document.querySelector(".site").classList.toggle("showmodal");
-};
-
-document.querySelector(".modalclose").addEventListener("click", () => {
-    document.querySelector(".site").classList.remove("showmodal");
 });

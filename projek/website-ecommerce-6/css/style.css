@@ -1204,7 +1204,7 @@ form.search button:hover {
     opacity: 0;
 }
 
-.showmenu .overlay {
+:where(.showmenu, .showmodal) .overlay {
     visibility: inherit;
     opacity: 1;
 }
@@ -2204,18 +2204,19 @@ input[type="range"]::-webkit-slider-thumb {
 .checkout p.checkset {
     flex-direction: row;
 }
+
 .checkout p.checkset label {
     /* margin: 0 0 0 1em ; */
     cursor: pointer;
 }
 
 .checkout h2 {
-    padding-top: .5em ;
+    padding-top: .5em;
     margin-bottom: .75em;
     border-top: 1px solid var(--border-color);
 }
 
-.primary-checkout button{
+.primary-checkout button {
     display: block;
     border: 0;
     outline: 0;
@@ -2226,7 +2227,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .checkout .item.right {
-    padding: 5em 0 0 ;
+    padding: 5em 0 0;
 }
 
 .summary-totals ul {
@@ -2262,4 +2263,63 @@ input[type="range"]::-webkit-slider-thumb {
     color: var(--light-bg-color);
     font-size: .85em;
     margin-top: .5em;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 600px;
+    width: 90%;
+    height: max-content;
+    padding: 2em;
+    margin: auto;
+    text-align: center;
+    background-color: var(--light-bg-color);
+    z-index: 100000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: transform .2s, visibility .2s, opacity .2s;
+}
+
+.showmodal .modal {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: transform 1s, visibility 1s, opacity 1s;
+
+}
+
+.modal .image {
+    position: relative;
+    height: calc(150px + 10vw);
+    overflow: hidden;
+    max-height: 400px;
+    margin: -2em -2em 0 -2em;
+}
+
+.modal h2 {
+    font-size: 1.75em;
+    text-transform: uppercase;
+    max-width: 300px;
+    margin: .5em auto;
+    line-height: 1;
+}
+
+.modal p {
+    margin-bottom: 1em;
+    color: var(--light-text-color);
+}
+
+.modal .t-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
