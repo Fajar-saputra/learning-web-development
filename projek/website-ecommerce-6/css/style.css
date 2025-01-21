@@ -1111,7 +1111,7 @@ form.search button:hover {
 }
 
 .footer-info .logo {
-    margin: 0 0 1em -3em;
+    margin-left: 5em;
 }
 
 /* MENU BOTTOM */
@@ -2322,4 +2322,16 @@ input[type="range"]::-webkit-slider-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Back to top */
+
+.backtotop a {
+    position: fixed;
+    right: 1em;
+    bottom: 2em;
+    gap: 0;
+    font-size: 1em;
+    padding: .5em 1em;
+    background-color: var(--border-color);
 }
