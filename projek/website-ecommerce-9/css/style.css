@@ -55,11 +55,11 @@ img {
 
 
 .heading-satu {
-    font-size: 4rem;
+    font-size: clamp(2.5rem , 8vw, 5rem);
 }
 
 .heading-dua {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem , 5vw, 3rem);
 }
 
 .line {
@@ -103,6 +103,7 @@ header .main-container {
 }
 
 .header-content {
+    width: 100%;
     color: var(--text-white);
     text-align: center;
 }
@@ -218,6 +219,7 @@ section {
     padding: 1rem;
     box-shadow: var(--box-shodow);
     border-radius: var(--border-radius);
+    margin: auto;
 }
 
 .events .col img {
@@ -237,7 +239,7 @@ section {
 }
 
 .explore-content {
-    width: 60%;
+    width: 100%;
     color: whitesmoke;
     padding: 50px;
 
@@ -273,7 +275,7 @@ section {
 
 .tour .heading-dua {
     line-height: 1.5;
-    width: 200px;
+    width: 250px;
     position: relative;
 }
 
@@ -332,7 +334,11 @@ footer p {
 
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+    .explore-content {
+        width: 70%;
+    }
+}
 
 @media (min-width: 992px) {}
 
