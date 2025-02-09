@@ -55,7 +55,7 @@ img {
 }
 
 .heading-dua {
-    font-size: clamp(1rem, 1.5rem + 1vw, 3.5rem);
+    font-size: 2.5rem;
 }
 
 .line {
@@ -91,6 +91,12 @@ header {
     justify-content: center;
 }
 
+header .main-container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
 .header-content {
     color: var(--text-white);
     text-align: center;
@@ -107,6 +113,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 9;
 }
 
 .navbar {
@@ -280,7 +287,13 @@ section {
     line-height: 2;
 }
 
-
+footer p{
+    width: 100%;
+    padding: 1rem 0 ;
+    text-align: center;
+    background-color: #484872;
+    color: rgb(164, 164, 164);
+}
 
 /* MEDIA QUERY */
 @media (min-width: 576px) {
