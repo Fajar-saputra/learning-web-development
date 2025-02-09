@@ -37,6 +37,10 @@ img {
     margin: 0;
 }
 
+.m-center {
+    margin: auto;
+}
+
 .mt-1 {
     margin-top: 1rem;
 }
@@ -89,6 +93,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem 0;
 }
 
 header .main-container {
@@ -103,7 +108,7 @@ header .main-container {
 }
 
 .section-navbar {
-    padding: .5rem 1rem;
+    padding: 1.5rem 1rem;
     position: fixed;
     top: 0;
     left: 0;
@@ -113,7 +118,7 @@ header .main-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 9;
+    z-index: 99;
 }
 
 .navbar {
@@ -142,7 +147,7 @@ header .main-container {
     border: none;
     outline: none;
     position: absolute;
-    top: 9px;
+    top: 20px;
     right: 20px;
 }
 
@@ -251,7 +256,7 @@ section {
 
 .tour .row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -287,9 +292,9 @@ section {
     line-height: 2;
 }
 
-footer p{
+footer p {
     width: 100%;
-    padding: 1rem 0 ;
+    padding: 1rem 0;
     text-align: center;
     background-color: #484872;
     color: rgb(164, 164, 164);
@@ -297,20 +302,22 @@ footer p{
 
 /* MEDIA QUERY */
 @media (min-width: 576px) {
+
     .navbar {
-        position: static;
-        top: inherit;
-        right: inherit;
+
+        position: absolute;
+        top: 20%;
+        right: 2%;
         flex-direction: row;
         height: inherit;
         width: inherit;
-
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
-
-        background-color: transparent;
+        background-color: initial;
         box-shadow: none;
+
+        z-index: 999;
+        color: var(--text-color);
+
+        opacity: 1;
     }
 
     .nav-link a {
