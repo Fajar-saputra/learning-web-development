@@ -244,7 +244,19 @@ input {
 
 
 /*=============== BUTTONS ===============*/
+.button {
+    display: inline-block;
+    background-color: var(--first-color );
+    color: #fff;
+    padding: .5rem 1.75rem;
+    border-radius: .2rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
 
+.button:hover {
+    background-color: var(--first-color-alt);
+}
 
 
 /*========== DISCOUNT SECTION ==========*/
@@ -273,6 +285,102 @@ input {
 
 
 /*=============== BLOG PAGE ===============*/
+
+
+/*=============== CART PAGE ===============*/
+
+
+/*=============== FAQ PAGE ===============*/
+
+
+/*Rotate icon, change color of titles and background*/
+
+
+/*=============== REGISTRATION PAGE ===============*/
+
+
+/*=============== CONTACT PAGE ===============*/
+
+
+/*=============== FOOTER ===============*/
+
+
+/*=============== SCROLL UP ===============*/
+
+
+/* Show Scroll Up*/
+
+
+/*=============== SCROLL BAR ===============*/
+
+
+/*=============== LOGIN ===============*/
+
+
+/* Show login */
+.login {
+    position: fixed;
+    background-color: var(--body-color);
+    z-index: var(--z-fixed);
+    width: 420px;
+    height: 100%;
+    box-shadow: -2px 0 4px var(--shadow);
+    top: 0;
+    right: -100%;
+    padding: 3.5rem 2rem;
+    transition: .3s ;
+}
+
+.login__title-center {
+    font-size: var(--h2-font-size);
+    text-align: center;
+    margin-bottom: var(--mb-3);
+}
+
+
+.login__close {
+    font-size: 2rem;
+    color: var(--title-color);
+    position: absolute;
+    top: 1.25rem;
+    right: .9rem;
+    cursor: pointer;
+}
+
+.login__form {
+    row-gap: 1.5rem;
+}
+
+.login__content {
+    background-color: var(--container-color);
+    border-radius: .5rem;
+    padding: .75rem 1rem .75rem;
+}
+
+.login__label {
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
+
+.login__input {
+    width: 100%;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    padding: .25rem .5rem .5rem 0;
+}
+
+.signup {
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+
+.signup a {
+    color: var(--first-color);
+}
+/*=============== CART ===============*/
 .cart {
     position: fixed;
     background-color: var(--body-color);
@@ -281,8 +389,9 @@ input {
     height: 100%;
     box-shadow: -2px 0 4px var(--shadow);
     top: 0;
-    right: 0;
+    right: -100%;
     padding: 3.5rem 2rem;
+    transition: .3s ;
 }
 
 .cart__title-center {
@@ -316,7 +425,7 @@ input {
     background-color: var(--container-color);
     padding: .75rem 1.25rem;
     display: flex;
-    align-items:center ;
+    align-items: center;
 }
 
 .cart__img {
@@ -334,44 +443,59 @@ input {
     color: var(--first-color);
     margin-bottom: var(--mb-1-5);
 }
-/*=============== CART PAGE ===============*/
 
+.cart__amount,
+.cart__amount-content {
+    display: flex;
+    align-items: center;
+}
 
-/*=============== FAQ PAGE ===============*/
+.cart__amount {
+    color: 3rem;
+}
 
+.cart__amount-content {
+    column-gap: 1rem;
+}
 
-/*Rotate icon, change color of titles and background*/
+.cart__amount-box {
+    display: inline-flex;
+    padding: .25rem;
+    background-color: var(--container-color);
+    cursor: pointer;
+}
 
+.cart__amount-trash {
+    font-size: 1.15rem;
+    color: var(--first-color);
+    cursor: pointer;
+}
 
-/*=============== REGISTRATION PAGE ===============*/
+.cart__prices {
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.cart__prices-item,
+.cart__prices-total {
+    color: var(--title-color);
+}
 
-/*=============== CONTACT PAGE ===============*/
+.cart__prices-item {
+    font-size: var(--small-font-size);
+}
 
-
-/*=============== FOOTER ===============*/
-
-
-/*=============== SCROLL UP ===============*/
-
-
-/* Show Scroll Up*/
-
-
-/*=============== SCROLL BAR ===============*/
-
-
-/*=============== LOGIN ===============*/
-
-
-/* Show login */
-
-
-/*=============== CART ===============*/
-
+.cart__prices-total {
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
 
 /* Show cart */
-
+.show-cart {
+    right: 0;
+}
 
 /*=============== LIGHTBOX ===============*/
 
