@@ -23,10 +23,6 @@
 /* Validate if constant exists */
 
 /*=============== HOME SWIPER ===============*/
-
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-
-/*=============== NEW SWIPER ===============*/
 var homeSwiper = new Swiper(".home-swiper", {
     spaceBetween: 30,
     loop: "true",
@@ -35,8 +31,7 @@ var homeSwiper = new Swiper(".home-swiper", {
         clickable: true,
     },
 });
-
-/*=============== SHOW SCROLL UP ===============*/
+/*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollheader() {
     const header = document.querySelector("#header");
     // whin the scroll is greater than 58 viewport height, add the scroll-header class to the header tag
@@ -45,6 +40,16 @@ function scrollheader() {
 }
 
 window.addEventListener("scroll", scrollheader);
+/*=============== NEW SWIPER ===============*/
+var newSwiper = new Swiper(".new-swiper", {
+    spaceBetween: 16,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: "true",
+});
+
+/*=============== SHOW SCROLL UP ===============*/
+
 /*=============== LIGHT BOX ===============*/
 
 /*=============== QUESTIONS ACCORDION ===============*/
