@@ -658,10 +658,40 @@ input {
 }
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+    position: fixed;
+    right: 1rem;
+    bottom: -30%;
+    background-color: var(--first-color);
+    border-radius: .4rem;
+    display: inline-flex;
+    padding: .25rem;
+    z-index: var(--z-tooltip);
+    opacity: .8;
+    transition: .4s;
 
+}
+
+.scrollup:hover {
+    opacity: 1;
+}
+
+.scroll__icon {
+    font-size: 1.5rem;
+    color: #fff;
+}
 
 /* Show Scroll Up*/
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: var(--scroll-bar-color);
+    border-radius: .5rem;
+}
 
+::-webkit-scrollbar-thumb{
+    background-color: var(--scroll-thumb-color);
+    border: .5rem;
+}
 
 /*=============== SCROLL BAR ===============*/
 
