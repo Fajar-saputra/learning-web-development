@@ -534,7 +534,7 @@ input {
 
 .newsletter__form {
     background-color: var(--container-color);
-    padding: 1rem ;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     border-radius: .75rem;
@@ -547,7 +547,7 @@ input {
     color: var(--title-color);
 }
 
-.newsletter__input::placeholder{
+.newsletter__input::placeholder {
     color: var(--text-color);
 }
 
@@ -582,7 +582,80 @@ input {
 
 
 /*=============== FOOTER ===============*/
+.footer {
+    position: relative;
+    overflow: hidden;
+}
 
+
+.footer__container {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.footer__logo {
+    color: var(--title-color);
+    text-transform: lowercase;
+    font-weight: var(--font-bold);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    margin-bottom: var(--mb-1);
+}
+
+.footer__logo-icon {
+    font-size: 1.25rem;
+}
+
+.footer__description {
+    margin-bottom: var(--mb-2-5);
+}
+
+.footer__social {
+    display: flex;
+    column-gap: .75rem;
+}
+
+.footer__social-link {
+    display: inline-flex;
+    background-color: var(--container-color);
+    padding: .25rem;
+    border-radius: .25rem;
+    color: var(--title-color);
+    font-size: 1rem;
+}
+
+.footer__social-link:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.footer__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.footer__links {
+    display: grid;
+    row-gap: .35rem;
+}
+
+.footer__link {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.footer__link:hover {
+    color: var(--title-color);
+}
+
+.footer__copy {
+    display: block;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    margin-top: 6rem;
+}
 
 /*=============== SCROLL UP ===============*/
 
