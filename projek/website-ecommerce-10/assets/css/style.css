@@ -241,7 +241,8 @@ input {
 /*=============== MAIN ===============*/
 /*========== HOME SECTION ==========*/
 .home__content {
-    padding: 9rem 0 2rem;
+    /* padding: 7rem 0 2rem; */
+    padding: 7rem 0 1rem;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
 }
@@ -302,6 +303,7 @@ input {
     font-weight: var(--font-bold);
     left: 109%;
     margin-bottom: var(--mb-1);
+    line-height: 1.1;
 }
 
 .home__description {
@@ -317,7 +319,7 @@ input {
 /* Swiper Class */
 .swiper-pagination {
     position: initial;
-    margin-top: var(--mb-1);
+    /* margin-top: var(--mb-1); */
 }
 
 .swiper-pagination-bullet {
@@ -682,19 +684,21 @@ input {
 }
 
 /* Show Scroll Up*/
+.show-scroll {
+    bottom: 3rem;
+}
+
+/*=============== SCROLL BAR ===============*/
 ::-webkit-scrollbar {
     width: .60rem;
     background-color: var(--scroll-bar-color);
     border-radius: .5rem;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--scroll-thumb-color);
     border: .5rem;
 }
-
-/*=============== SCROLL BAR ===============*/
-
 
 /*=============== LOGIN ===============*/
 .login {
@@ -857,7 +861,7 @@ input {
 }
 
 .cart__prices {
-    margin-top: 6rem;
+    margin-top: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
