@@ -93,6 +93,30 @@ function scrollUp() {
 
 window.addEventListener("scroll", scrollUp);
 /*=============== LIGHT BOX ===============*/
+const productItems = document.querySelectorAll(".product__img"),
+    totalProductItems = productItems.length,
+    lightBox = document.querySelector(".lightbox"),
+    lightBoxImg = lightBox.querySelector(".lightbox__img"),
+    lightBoxClose = lightBox.querySelector(".lightbox__close"),
+    lightBoxCounter = lightBox.querySelector(".lightbox__counter");
+
+let itemIndex = 0;
+
+for (let i = 0; i < totalProductItems; i++){
+    productItems[i].addEventListener('click', () => {
+        itemIndex = i;
+        changeItem();
+    })
+}
+
+function changeItem() {
+    imgSrc = productItems[itemIndex].querySelector('.portfolio__img img').getAttribute("src");
+
+    console.log(imgSrc)
+}
+imgSrc = productItems[itemIndex].querySelector('.new__img').getAttribute("src");
+
+console.log(imgSrc)
 
 /*=============== QUESTIONS ACCORDION ===============*/
 const accordionItem = document.querySelectorAll(".questions__item");
