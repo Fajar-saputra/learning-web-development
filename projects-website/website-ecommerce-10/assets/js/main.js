@@ -92,70 +92,6 @@ function scrollUp() {
 }
 
 window.addEventListener("scroll", scrollUp);
-/*=============== LIGHT BOX ===============*/
-const productItems = document.querySelectorAll(".product__img"),
-    totalProductItems = productItems.length,
-    lightBox = document.querySelector(".lightbox"),
-    lightBoxImg = lightBox.querySelector(".lightbox__img"),
-    lightBoxClose = lightBox.querySelector(".lightbox__close"),
-    lightBoxCounter = lightBox.querySelector(".caption__counter");
-
-let itemIndex = 0;
-
-for (let i = 0; i < totalProductItems; i++) {
-    productItems[i].addEventListener("click", () => {
-        itemIndex = i;
-        changeItem();
-        toggleLightbox();
-    });
-}
-
-function nextItem() {
-    if (itemIndex == totalProductItems - 1) {
-        itemIndex = 0;
-    } else {
-        itemIndex++;
-    }
-
-    console.log(itemIndex);
-}
-
-function toggleLightbox() {
-    lightBox.classList.toggle("open");
-}
-
-function changeItem() {
-    imgSrc = productItems[itemIndex].querySelector(".product__img img").getAttribute("src");
-
-    lightBoxImg.src = imgSrc;
-    lightBoxCounter.innerHTML = itemIndex + " of " + totalProductItems;
-    console.log(imgSrc);
-}
-
-function nextItem() {
-    if (itemIndex == totalProductItems - 1) {
-        itemIndex = 0;
-    } else {
-        itemIndex++;
-    }
-    changeItem();
-}
-
-function prevItem() {
-    if (itemIndex == 0) {
-        itemIndex = totalProductItems - 1;
-    } else {
-        itemIndex--;
-    }
-    changeItem();
-}
-
-// close lightbox
-lightBox.addEventListener("click", () => {
-    if (event.target === lightBoxClose || event.target == lightBox) {
-        toggleLightbox();
-    }
-});
 
 /*=============== QUESTIONS ACCORDION ===============*/
 const accordionItem = document.querySelectorAll(".questions__item");
@@ -187,3 +123,51 @@ const toggleItem = (item) => {
 };
 
 /*=============== STYLE SWITCHER ===============*/
+
+// style__switcher-toggler
+
+let styleSwitcherToggler = document.querySelector(".style__switcher-toggler"),
+    styleSwitcher = document.querySelector(".style__switcher");
+
+styleSwitcherToggler.addEventListener("click", () => {
+    styleSwitcher.classList.toggle("open");
+});
+
+window.addEventListener("scroll", () => {
+    if (styleSwitcher.classList.contains("open")) {
+        styleSwitcher.classList.remove("open");
+    }
+});
+
+// Theme colors
+function themeColors() {
+    const colorStyle = document.querySelector(".js-color-style"),
+        themeColorContainer = document.querySelector(".js-theme-colors");
+
+    themeColorContainer.addEventListener("click", ({ target }) => {
+        if (target.classList.contains("js-theme-color-item")) {
+            localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
+            setColors();
+        }
+    });
+    function setColors() {
+        let path = colorStyle.getAttribute("href").split("/");
+        path = path.slice(0, path.length - 1);
+        colorStyle.setAttribute("href", path.join("/") + "/" + localStorage.getItem("color") + ".css");
+
+        if (document.querySelector(".js-theme-color-item.active")) {
+            document.querySelector(".js-theme-color-item").classList.remove("active");
+        }
+
+        document.querySelector("[data-js-theme-color=" + localStorage.getItem("color") + "]").classList.add("active");
+    }
+    if (localStorage.getItem("color") !== null) {
+        setColors();
+    }
+    else {
+        const defaultColor = colorStyle.getAttribute('href')
+        document.querySelector('[data-js-theme-color' + defaultColor + ']').classList.add('active')
+    }
+}
+
+themeColors();
