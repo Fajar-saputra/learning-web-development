@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-family: 'Poppins', arial;
+    overflow-x: hidden;
+}
+
+:root {
+    --h1: #1e1964;
+    --blue: #34A1CD;
+    --dark-purple: #55527C;
+    --grey: #B4B2C5;
+    --pink: #EA4C89;
+    --circle: #F4F3FF;
+    --light-pink: #FFF5F6;
+
+}
+
+li {
+    list-style: none;
+}
+
+li:hover {
+    font-size: 20px;
+    font-weight: bold;
+    transform: scale(1.2);
+}
+
+h1 {
+    font-size: 50px;
+    color: var(--h1);
+    font-weight: 900;
+}
+
+h3 {
+    color: var(--grey);
+}
+
+p {
+    font-size: 16px;
+    color: var(--grey);
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    width: 100px;
+    padding: 8px 12px;
+    background: var(--h1);
+    color: whitesmoke;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button:hover {
+    background: white;
+    border: 1px solid var(--h1);
+    color: var(--h1);
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: 60px auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.highlight {
+    color: var(--blue);
+}
