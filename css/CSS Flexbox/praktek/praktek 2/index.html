@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .main__container {
+            margin: auto;
+            max-width: 600px;
+            width: 90%;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            border-radius: .3rem;
+        }
+
+        .form__container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .name,
+        .email,
+        .password,
+        .no-hp {
+            flex: 1 0 200px;
+        }
+
+        .button {
+            flex: 1 0 auto;
+        }
+
+        input,
+        button {
+            padding: .8rem 1rem;
+            width: 100%;
+            background-color: #f9f9f9;
+            border: none;
+            outline: none;
+            border-radius: .3rem;
+            transition: background-color .3s ease;
+
+        }
+
+        input:hover {
+            box-shadow: 0 0 10px rgb(0, 255, 68);
+        }
+
+        input:focus {
+            background-color: #fff;
+            outline: 2px solid rgb(0, 255, 68);
+        }
+
+        button {
+            background-color: rgb(106, 255, 146);
+            color: rgb(57, 57, 57);
+        }
+
+        button:hover {
+            background-color: rgb(0, 255, 68);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main__container">
+        <form action="" class="form__container">
+            <input type="text" placeholder="Name" class="name">
+            <input type="email" placeholder="Email" class="email">
+            <input type="number" placeholder="Email" class="no-hp">
+            <input type="text" placeholder="Password" class="password">
+            <button class="button">Submit </button>
+        </form>
+    </div>
+</body>
+
+</html>
