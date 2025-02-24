@@ -29,28 +29,19 @@ li {
     list-style: none;
 }
 
-li:hover {
-    font-size: 20px;
-    font-weight: bold;
-    transform: scale(1.2);
-}
-
 h1 {
     font-size: 50px;
     color: var(--h1);
     font-weight: 900;
 }
 
-h3 {
-    color: var(--grey);
-}
 
 p {
-    font-size: 16px;
-    color: var(--grey);
+    font-size: .9rem;
 }
 
 a {
+    color: rgb(32, 32, 32);
     text-decoration: none;
 }
 
@@ -71,18 +62,17 @@ a {
 }
 
 .container {
-    width: 80%;
-    margin: 60px auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.row {
+.flex {
     display: flex;
-    justify-content: center;
 }
 
-.col {
-    display: flex;
-    justify-content: center;
+.grid {
+    display: grid;
 }
 
 .highlight {
