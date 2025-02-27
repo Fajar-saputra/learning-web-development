@@ -23,26 +23,21 @@
             fajar<span>saputra</span>
         </div>
         <ul class="navbar">
-            <li class="navbar__link"><a href="#">Home</a></li>
-            <li class="navbar__link"><a href="#">Skills</a></li>
-            <li class="navbar__link"><a href="#">Services</a></li>
-            <li class="navbar__link"><a href="#">Contact</a></li>
+            <li class="navbar__link"><a href="#home">Home</a></li>
+            <li class="navbar__link"><a href="#skills">Skills</a></li>
+            <li class="navbar__link"><a href="#portfolios">Portfolios</a></li>
+            <li class="navbar__link"><a href="#testimonials">Testimonials</a></li>
+            <li class="navbar__link"><a href="#contact">Contact</a></li>
 
         </ul>
-        <div class="button__icons">
-            <div class="user__icon"></div>
-            <div class="toggle__button">
-                <button id="button-sementara">
-                    T
-                </button>
+        <button class="toggle__button">=
+        </button>
 
-            </div>
-        </div>
     </nav>
 
     <!-- HEADER -->
-    <header class="header__container main__container grid pb-2">
-        <div class="circle"></div>
+    <header class="header__container main__container grid" id="home">
+        <div class="bg-circle"></div>
 
         <div class="hero__content">
             <h1 class="section__title">Hey, I’m a <span class="highlight">Front-End</span> web developer. </h1>
@@ -57,7 +52,7 @@
     </header>
 
     <!-- SKILLS -->
-    <section class="main__container">
+    <section class="main__container" id="skills">
         <div class="mb-2">
             <h3 class="heading__subtitle text-center">MY SKILLS</h3>
             <h2 class="heading__title text-center mt-1">My Expertise</h1>
@@ -108,7 +103,7 @@
     </section>
 
     <!-- PORTFOLIOS -->
-    <section class="main__container portfolio">
+    <section class="main__container portfolio" id="portfolios">
         <div class="bg__portfolio"></div>
 
         <div class="portfolio__heading flexitem">
@@ -171,7 +166,7 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials ">
+    <section class="testimonials" id="testimonials">
         <div class="main__container">
             <div class="mb-2">
                 <h2 class="heading__title text-center mt-1">Customer Testimonials</h2>
@@ -226,8 +221,8 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact">
-        <div class="main__container">
+    <section class="contact main__container" id="contact">
+        
             <div class="heading__contact">
                 <h2 class="heading__title text-center mb-1">Got A Project! Let's Talk</h2>
                 <h3 class="heading__subtitle text-center">CONTACT ME</h3>
@@ -240,19 +235,24 @@
                     fajar<span>saputra</span>
                 </div>
                 <ul>
-                    <li>Home</li>
-                    <li>Skills</li>
-                    <li>Services</li>
-                    <li>About</li>
+                    <li class="navbar__link"><a href="#home">Home</a></li>
+                    <li class="navbar__link"><a href="#skills">Skills</a></li>
+                    <li class="navbar__link"><a href="#portfolios">Portfolios</a></li>
+                    <li class="navbar__link"><a href="#testimonials">Testimonials</a></li>
+                    <li class="navbar__link"><a href="#contact">Contact</a></li>
+
                 </ul>
             </div>
         </div>
     </section>
 
     <!-- COPY RIGHT -->
-    <footer class="copyright main__container">
-        <p>© 2020 Gowtham Tirri | Subscribe on Youtube</p>
+    <footer class="copyright text-center">
+        <p>&copy;copyright by fajar saputra </p>
     </footer>
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
