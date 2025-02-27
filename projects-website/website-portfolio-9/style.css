@@ -293,7 +293,8 @@ img {
     color: var(--pink);
 }
 
-.portfolio__wrapper,.testimonials__wrapper {
+.portfolio__wrapper,
+.testimonials__wrapper {
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 }
 
@@ -342,7 +343,7 @@ img {
 }
 
 .testimonials__wrapper-item {
-    padding: 1rem;
+    padding: 2rem 1rem;
     background: #fff;
     display: flex;
     flex-direction: column;
@@ -383,6 +384,52 @@ img {
 
 .testimonials__wrapper-item:hover img {
     transform: scale(1.2);
+}
+
+/* CONTACT */
+/* Contact */
+
+.contact .main__container {
+    text-align: center;
+    background: #E9F9FF;
+    border-radius: .5rem;
+    height: 400px;
+    width: 100%;
+    padding: 2rem 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.contact .fa {
+    margin-right: 30px;
+    font-size: 30px;
+    color: var(--blue);
+}
+
+.contact .quick-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.contact .quick-links ul {
+    display: flex;
+}
+
+.contact .quick-links ul li {
+    margin: 0px 20px;
+    color: var(--dark-purple);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copyright p {
+    color: var(--dark-purple);
+    font-weight: bold;
 }
 
 @media (min-width: 576px) {}
