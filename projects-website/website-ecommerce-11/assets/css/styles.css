@@ -3,44 +3,44 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: ;
+  --header-height: 4rem;
 
   /*========== Colors ==========*/
   /* Color mode HSL(hue, saturation, lightness) */
-  --first-color: ;
-  --first-color-alt: ;
-  --second-color: ;
-  --title-color: ;
-  --text-color: ;
-  --text-color-light: ;
-  --body-color: ;
-  --container-color: ;
-  --border-color: ;
-  --border-color-alt: ;
+  --first-color: rgb(8, 129, 125);
+  --first-color-alt: rgb(233, 246, 235);
+  --second-color: rgb(253, 226, 191);
+  --title-color: hsl(0, 0%, 13%);
+  --text-color: rgb(71, 92, 83);
+  --text-color-light: rgb(144, 144, 142);
+  --body-color: rgb(144, 144, 142);
+  --container-color: rgb(237, 237, 237);
+  --border-color: rgb(203, 231, 207);
+  --border-color-alt: rgb(22, 129, 8);
 
   /*========== Font and typography ==========*/
   /* .5rem = 8px | 1rem = 16px ... */
-  --body-font: ;
-  --second-font: ;
-  --big-font-size: ;
-  --h1-font-size: ;
-  --h2-font-size: ;
-  --h3-font-size: ;
-  --h4-font-size: ;
-  --large-font-size: ;
-  --normal-font-size: ;
-  --small-font-size: ;
-  --smaller-font-size: ;
-  --tiny-font-size: ;
+  --body-font: 'Lato', sans-serif;
+  --second-font: 'League Sparta', sans-serif;
+  --big-font-size: 3.5rem;
+  --h1-font-size: 2.75rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.375rem;
+  --large-font-size: 1.125rem;
+  --normal-font-size: 1rem;
+  --small-font-size: .875rem;
+  --smaller-font-size: .75rem;
+  --tiny-font-size: .6875rem;
 
   /*========== Font weight ==========*/
-  --weight-400: ;
-  --weight-500: ;
-  --weight-600: ;
-  --weight-700: ;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
 
   /*========== Transition ==========*/
-  --transition: ;
+  --transition: cubic-bezier(0, 0, 0.25, 1);
 }
 
 /* Responsive typography */
@@ -60,10 +60,123 @@
 }
 
 /*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+body {
+  color: var(--text-color);
+  font-family: var(--body-color);
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-400);
+}
+
+body {
+  background-color: var(--body-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--second-font);
+  color: var(--title-color);
+  font-weight: var(--weight-600);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+button,
+textarea,
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: .75rem;
+}
 
 /*=============== HEADER & NAV ===============*/
+.header__top {
+  background-color: var(--first-color-alt);
+  border-bottom: 1px solid var(--first-color);
+  padding-block: .875rem;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__contact span:first-child {
+  margin-right: 2rem;
+}
+
+.header__contact span,
+.header__alert-news,
+.header__top-action {
+  font-size: var(--small-font-size);
+}
+
+.header__alert-news {
+  color: var(--text-color-light);
+  font-weight: var(--weight-600);
+}
+
+.header__top-action {
+  color: var(--text-color);
+}
+
+.nav,
+.nav__menu,
+.nav__list,
+.header__user-actions {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  height: calc(var(--header-height) + 2.5rem);
+  justify-content: space-between;
+}
+
+.nav__logo-img {
+  width: 150px;
+}
+
+.nav__menu {
+  width: 100%;
+  margin-left: 2.5rem;
+}
+
+.nav__list {
+  margin-right: auto;
+}
 
 /* Active link */
 
@@ -115,22 +228,16 @@
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1400px) {
-}
+@media screen and (max-width: 1400px) {}
 
-@media screen and (max-width: 1200px) {
-}
+@media screen and (max-width: 1200px) {}
 
 /* For medium devices */
-@media screen and (max-width: 992px) {
-}
+@media screen and (max-width: 992px) {}
 
-@media screen and (max-width: 768px) {
-}
+@media screen and (max-width: 768px) {}
 
 /* For small devices */
-@media screen and (max-width: 576px) {
-}
+@media screen and (max-width: 576px) {}
 
-@media screen and (max-width: 350px) {
-}
+@media screen and (max-width: 350px) {}
