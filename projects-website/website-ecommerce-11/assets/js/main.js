@@ -9,13 +9,6 @@
 /*=============== IMAGE GALLERY ===============*/
 
 /*=============== SWIPER CATEGORIES ===============*/
-// var newSwiper = new Swiper(".categories__container", {
-//     spaceBetween: 16,
-//     centeredSlides: true,
-//     slidesPerView: "auto",
-//     loop: "true",
-// });
-
 var swiper = new Swiper(".categories__container", {
     spaceBetween: 24,
     loop: true,
@@ -42,3 +35,26 @@ var swiper = new Swiper(".categories__container", {
 /*=============== SWIPER PRODUCTS ===============*/
 
 /*=============== PRODUCTS TABS ===============*/
+const tabs = document.querySelectorAll("[data-target]"),
+    tabContents = document.querySelectorAll("[content]");
+
+console.log(tabs);
+
+tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+        const target = document.querySelector(tab.dataset.target); 
+        tabContents.forEach((tabContent) => {
+            tabContent.classList.remove("active-tab");
+        });
+        
+        target.classList.add('active-tab')
+
+        tabs.forEach((tab) => {
+            tab.classList.remove('active-tab')
+        })
+        
+        tab.classList.add('active-tab')
+
+        console.log('tess')
+    });
+});
