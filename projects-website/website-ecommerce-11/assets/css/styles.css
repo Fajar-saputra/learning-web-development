@@ -340,6 +340,12 @@ input {
    color: var(--first-color);
 }
 
+.btn--md {
+   font-family: var(--body-font);
+   height: 45px;
+   line-height: 42px;
+}
+
 /*=============== CATEGORIES ===============*/
 .categories {
    overflow: hidden;
@@ -610,9 +616,103 @@ input {
 }
 
 /*=============== DEALS ===============*/
+.deals__container {
+   grid-template-columns: repeat(2,1fr);
+}
+
+.deals__item:nth-child(1){
+   background-image: url(../img/deals-1.jpg);
+}
+.deals__item:nth-child(2){
+   background-image: url(../img/deals-2.png);
+}
+
+.deals__item{
+   padding: 3rem;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   row-gap: 1.5rem;
+}
+
+.deals__brand{
+   color: var(--first-color);
+   font-size: var(--h3-font-size);
+   margin-bottom: .25rem;
+}
+
+.deals__category{
+   font-family: var(--second-font);
+   font-size: var(--small-font-size);
+}
+
+.deals__title {
+   max-width: 240px;
+   font-size: var(--large-font-size);
+   font-weight: var(--weight-400);
+   line-height: 1.3;
+}
+
+.deals__price .new__price,
+.deals__price .old__price{
+   font-size: var(--large-font-size);
+}
+
+.deals__price .new__price {
+   color: hsl(352, 100%, 60%);
+}
+
+.deals__countdown-text {
+   margin-bottom: .25rem;
+}
+
+.countdown {
+   display: flex;
+   column-gap: 1.5rem;
+}
+
+.countdown__amount {
+   position: relative;
+}
+
+.countdown__amount:not(:last-child)::after{
+   content: ':';
+   color: var(--title-color);
+   font-size: var(--large-font-size);
+   position: absolute;
+   right: -25%;
+   top: 20%;
+}
+
+.countdown__period{
+   background-color: var(--first-color);
+   color: var(--body-color);
+   width:50px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: .25rem;
+   font-size: var(--large-font-size);
+   font-weight: var(--weight-600);
+   margin-bottom: .5rem;
+}
+
+.unit{
+   font-size: var(--small-font-size);
+   text-align: center;
+   display: block;
+}
+
+.deals__btn .btn {
+   background-color: transparent;
+   color: var(--first-color);
+}
 
 /*=============== NEW ARRIVALS ===============*/
-
+.new__arrivals{
+   overflow: hidden;
+}
 /*=============== SHOWCASE ===============*/
 
 /*=============== NEWSLETTER ===============*/
