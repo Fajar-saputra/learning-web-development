@@ -599,17 +599,17 @@ input {
 
 .product__item:hover .product__img.hover,
 .product__item:hover .product__actions,
-.action__btn:hover::before, 
+.action__btn:hover::before,
 .action__btn:hover::after {
    opacity: 1;
 }
 
-.action__btn:hover::before, 
-.action__btn:hover::after{
-   transform: translateX(-50%)  translateY(-.5rem);
+.action__btn:hover::before,
+.action__btn:hover::after {
+   transform: translateX(-50%) translateY(-.5rem);
 }
 
-.action__btn:hover{
+.action__btn:hover {
    background-color: var(--first-color);
    border-color: var(--first-color);
    color: var(--body-color);
@@ -617,17 +617,18 @@ input {
 
 /*=============== DEALS ===============*/
 .deals__container {
-   grid-template-columns: repeat(2,1fr);
+   grid-template-columns: repeat(2, 1fr);
 }
 
-.deals__item:nth-child(1){
+.deals__item:nth-child(1) {
    background-image: url(../img/deals-1.jpg);
 }
-.deals__item:nth-child(2){
+
+.deals__item:nth-child(2) {
    background-image: url(../img/deals-2.png);
 }
 
-.deals__item{
+.deals__item {
    padding: 3rem;
    background-size: cover;
    background-position: center;
@@ -636,13 +637,13 @@ input {
    row-gap: 1.5rem;
 }
 
-.deals__brand{
+.deals__brand {
    color: var(--first-color);
    font-size: var(--h3-font-size);
    margin-bottom: .25rem;
 }
 
-.deals__category{
+.deals__category {
    font-family: var(--second-font);
    font-size: var(--small-font-size);
 }
@@ -655,7 +656,7 @@ input {
 }
 
 .deals__price .new__price,
-.deals__price .old__price{
+.deals__price .old__price {
    font-size: var(--large-font-size);
 }
 
@@ -676,7 +677,7 @@ input {
    position: relative;
 }
 
-.countdown__amount:not(:last-child)::after{
+.countdown__amount:not(:last-child)::after {
    content: ':';
    color: var(--title-color);
    font-size: var(--large-font-size);
@@ -685,10 +686,10 @@ input {
    top: 20%;
 }
 
-.countdown__period{
+.countdown__period {
    background-color: var(--first-color);
    color: var(--body-color);
-   width:50px;
+   width: 50px;
    height: 40px;
    line-height: 40px;
    text-align: center;
@@ -698,7 +699,7 @@ input {
    margin-bottom: .5rem;
 }
 
-.unit{
+.unit {
    font-size: var(--small-font-size);
    text-align: center;
    display: block;
@@ -710,10 +711,65 @@ input {
 }
 
 /*=============== NEW ARRIVALS ===============*/
-.new__arrivals{
+.new__arrivals {
    overflow: hidden;
 }
+
+.new__arrivals .cart__btn {
+   bottom: .5rem;
+   right: 1rem;
+
+}
+
 /*=============== SHOWCASE ===============*/
+.showcase__container {
+   grid-template-columns: repeat(4, 1fr);
+}
+
+.showcase__wrapper .section__title {
+   font-size: var(--normal-font-size);
+   border-bottom: 1px solid var(--border-color-alt);
+   padding-bottom: 0.75rem;
+   margin-bottom: 2rem;
+   position: relative;
+}
+
+.showcase__wrapper .section__title::before {
+   content: '';
+   position: absolute;
+   left: 0;
+   bottom: -1.3px;
+   width: 50px;
+   height: 2px;
+   background-color: var(--first-color);
+}
+
+.showcase__item {
+   display: flex;
+   align-content: center;
+   column-gap: 1.5rem;
+}
+
+.showcase__item:not(:last-child) {
+   margin-bottom: 1rem;
+}
+
+.showcase__img-box {
+   width: 86px;
+}
+
+.showcase__content {
+   width: calc(100% - 110px);
+}
+
+.showcase__title {
+   font-size: var(--small-font-size);
+   font-weight: var(--weight-500);
+   /* white-space: nowrap; */
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-bottom: 0.5rem;
+}
 
 /*=============== NEWSLETTER ===============*/
 
