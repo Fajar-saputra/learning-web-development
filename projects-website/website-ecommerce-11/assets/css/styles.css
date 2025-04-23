@@ -953,6 +953,11 @@ input {
    color: var(--body-color);
 }
 
+.pagination__link.icon{
+   border-top-right-radius: 50%;
+   border-bottom-right-radius: 50%;
+}
+
 /*=============== DETAILS ===============*/
 
 /*=============== DETAILS INFO & REVIEWS ===============*/
